@@ -1,0 +1,240 @@
+/* =========================================
+   ESTILOS PARA PÁGINAS INFORMATIVAS
+   ========================================= */
+
+.info-page-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.info-page-header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #0056b3;
+}
+
+.info-page-header h1 {
+    color: #0056b3;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.info-content {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    line-height: 1.6;
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+.info-content p {
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.info-content h2 {
+    color: #0056b3;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e8e8e8;
+    font-size: 1.5em;
+}
+
+.info-content h3 {
+    color: #333;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 1.3em;
+}
+
+.info-content ul,
+.info-content ol {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.info-content li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.back-to-home {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.btn-back {
+    display: inline-block;
+    background: #0056b3;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    border: 2px solid #0056b3;
+}
+
+.btn-back:hover {
+    background: white;
+    color: #0056b3;
+}
+
+/* =========================================
+   SECCIONES ESPECÍFICAS
+   ========================================= */
+
+.legal-notice,
+.contact-info,
+.store-hours,
+.store-info {
+    padding: 20px;
+    border-radius: 5px;
+    margin: 20px 0;
+}
+
+.legal-notice {
+    background: #f8f9fa;
+    border-left: 4px solid #dc3545;
+}
+
+.legal-notice h3 {
+    color: #dc3545;
+}
+
+.contact-info {
+    background: #e7f3ff;
+    border-left: 4px solid #0056b3;
+}
+
+.contact-info h3 {
+    color: #0056b3;
+}
+
+.store-hours {
+    background: #fff3cd;
+    border-left: 4px solid #ffc107;
+}
+
+.store-hours h3 {
+    color: #856404;
+}
+
+.store-info {
+    background: #f8f9fa;
+    border-left: 4px solid #28a745;
+}
+
+.store-info h3 {
+    color: #28a745;
+    margin-bottom: 10px;
+}
+
+.store-info p {
+    margin-bottom: 5px;
+}
+
+/* Listas de características */
+.feature-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.feature-item {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.feature-item h4 {
+    color: #0056b3;
+    margin-bottom: 10px;
+}
+
+/* Títulos extra (MISIÓN / VISIÓN) */
+.titulo-seccion {
+    font-weight: 700;
+    font-size: 1.3em;
+    color: #333;
+    margin: 20px 0 10px;
+}
+
+/* =========================================
+   RESPONSIVE DESIGN
+   ========================================= */
+
+/* Tablets y pantallas medianas */
+@media (max-width: 768px) {
+
+    .info-page-container {
+        padding: 15px;
+    }
+
+    .info-page-header h1 {
+        font-size: 2em;
+    }
+
+    .info-content {
+        padding: 20px;
+        font-size: 1em;
+    }
+
+    .info-content h2 {
+        font-size: 1.3em;
+    }
+
+    .info-content h3 {
+        font-size: 1.15em;
+    }
+
+    .feature-list {
+        grid-template-columns: 1fr;
+    }
+
+    .btn-back {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Móviles pequeños */
+@media (max-width: 480px) {
+
+    .info-page-header h1 {
+        font-size: 1.7em;
+    }
+
+    .info-content {
+        padding: 15px;
+        font-size: 0.95em;
+    }
+
+    .legal-notice,
+    .contact-info,
+    .store-hours,
+    .store-info {
+        padding: 15px;
+    }
+
+    .feature-item {
+        padding: 12px;
+    }
+
+    .titulo-seccion {
+        font-size: 1.15em;
+    }
+
+    .info-content ul,
+    .info-content ol {
+        margin-left: 15px;
+    }
+}
