@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
     // ===================================================================================================
-    //                                  RENDERIZADO DE VISTAS Y DATOS
+    //                              RENDERIZADO DE VISTAS Y DATOS
     // ===================================================================================================
 
     // Función para renderizar el contenido de la página basado en el estado
@@ -124,7 +124,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (mainNavUL) {
             mainNavUL.innerHTML = CATEGORIAS_GLOBAL.map(cat => `
                 <li>
-                    <a href="indice.html?page=catalogo&cat=${cat.nombre}" data-nav-target="catalogo" data-cat-name="${cat.nombre}" class="nav-link">${cat.nombre}</a>
+                    <a href="index.html?page=catalogo&cat=${cat.nombre}" data-nav-target="catalogo" data-cat-name="${cat.nombre}" class="nav-link">${cat.nombre}</a>
                 </li>
             `).join('');
         }
@@ -132,14 +132,14 @@ document.addEventListener('DOMContentLoaded', () => {
         if (footerCatUL) {
             footerCatUL.innerHTML = CATEGORIAS_GLOBAL.map(cat => `
                 <li>
-                    <a href="indice.html?page=catalogo&cat=${cat.nombre}" data-nav-target="catalogo" data-cat-name="${cat.nombre}">${cat.nombre}</a>
+                    <a href="index.html?page=catalogo&cat=${cat.nombre}" data-nav-target="catalogo" data-cat-name="${cat.nombre}">${cat.nombre}</a>
                 </li>
             `).join('');
         }
     }
 
     // ===================================================================================================
-    //                              FUNCIONES DE COMPONENTES/FRAGMENTS
+    //                              FUNCIONES DE COMPONENTES/FRAGMENTS
     // ===================================================================================================
 
 function renderHeader() {
@@ -151,7 +151,7 @@ function renderHeader() {
                     &#9776;
                 </button>
                 <div class="logo">
-                    <a href="indice.html" class="logo-link" data-nav-target="catalogo">
+                    <a href="index.html" class="logo-link" data-nav-target="catalogo">
                         <img src="images/images/electroshop-logo.png" alt="ELECTRO SHOP Logo" class="main-logo">
                     </a>
                 </div>
@@ -160,7 +160,7 @@ function renderHeader() {
                     <button type="submit" class="search-btn">🔍</button>
                 </form>
                 <div class="user-links">
-                    <a href="indice.html?page=login" class="user-link" data-nav-target="login" style="display: ${appState.isLoggedIn ? 'none' : 'block'}">
+                    <a href="index.html?page=login" class="user-link" data-nav-target="login" style="display: ${appState.isLoggedIn ? 'none' : 'block'}">
                         Iniciar sesión
                     </a>
                     <div class="user-menu-container" style="display: ${appState.isLoggedIn ? 'block' : 'none'}">
@@ -173,10 +173,10 @@ function renderHeader() {
                             </div>
                             <ul class="dropdown-links">
                                 <li>
-                                    <a href="indice.html?page=perfil" data-nav-target="perfil">Editar Perfil</a>
+                                    <a href="index.html?page=perfil" data-nav-target="perfil">Editar Perfil</a>
                                 </li>
                                 <li>
-                                    <a href="indice.html?page=pedidos" data-nav-target="pedidos">Mis Pedidos</a>
+                                    <a href="index.html?page=pedidos" data-nav-target="pedidos">Mis Pedidos</a>
                                 </li>
                             </ul>
                             <div class="dropdown-footer">
@@ -184,7 +184,7 @@ function renderHeader() {
                             </div>
                         </div>
                     </div>
-                    <a href="indice.html?page=cart" data-nav-target="cart" class="cart-link" >
+                    <a href="index.html?page=cart" data-nav-target="cart" class="cart-link" >
                         <img src="images/images/logo-carrito.png" alt="Carrito" class="cart-icon-img">
                         (<span class="cart-item-count">${appState.cart.length}</span>)
                     </a>
@@ -214,10 +214,10 @@ function renderFooter() {
                     <h3 class="footer-toggle" data-target="footer-shop">ELECTRO SHOP</h3>
                     <div id="footer-shop" class="footer-content">
                         <ul>
-                            <li><a href="indice.html?page=acerca" data-nav-target="info-page" data-page-id="acerca">Acerca de Nosotros</a></li>
-                            <li><a href="indice.html?page=tiendas" data-nav-target="info-page" data-page-id="tiendas">Ubicación de Tiendas</a></li>
-                            <li><a href="indice.html?page=catalogo-digital" data-nav-target="catalogo-digital">Catálogo Digital</a></li>
-                            <li><a href="indice.html?page=empleo" data-nav-target="info-page" data-page-id="empleo">Únete al equipo</a></li>
+                            <li><a href="index.html?page=acerca" data-nav-target="info-page" data-page-id="acerca">Acerca de Nosotros</a></li>
+                            <li><a href="index.html?page=tiendas" data-nav-target="info-page" data-page-id="tiendas">Ubicación de Tiendas</a></li>
+                            <li><a href="index.html?page=catalogo-digital" data-nav-target="catalogo-digital">Catálogo Digital</a></li>
+                            <li><a href="index.html?page=empleo" data-nav-target="info-page" data-page-id="empleo">Únete al equipo</a></li>
                         </ul>
                     </div>
                 </div>
@@ -225,9 +225,9 @@ function renderFooter() {
                     <h3 class="footer-toggle" data-target="footer-politicas">POLÍTICAS</h3>
                     <div id="footer-politicas" class="footer-content">
                         <ul>
-                            <li><a href="indice.html?page=terminos" data-nav-target="terminos">Términos y Condiciones</a></li>
-                            <li><a href="indice.html?page=privacidad" data-nav-target="privacidad">Política de Privacidad</a></li>
-                            <li><a href="indice.html?page=garantias" data-nav-target="garantias">Información de Garantías</a></li>
+                            <li><a href="index.html?page=terminos" data-nav-target="terminos">Términos y Condiciones</a></li>
+                            <li><a href="index.html?page=privacidad" data-nav-target="privacidad">Política de Privacidad</a></li>
+                            <li><a href="index.html?page=garantias" data-nav-target="garantias">Información de Garantías</a></li>
                         </ul>
                     </div>
                 </div>
@@ -253,7 +253,7 @@ function renderFooter() {
 }
 
     // ===================================================================================================
-    //                                  MANEJO DE VISTAS (MAIN CONTENT)
+    //                                  MANEJO DE VISTAS (MAIN CONTENT)
     // ===================================================================================================
 
     function renderMainContent(page, params = {}) {
@@ -309,7 +309,7 @@ function renderFooter() {
     }
 
     // ===================================================================================================
-    //                                  FUNCIONES DE VISTA ESPECÍFICAS
+    //                                  FUNCIONES DE VISTA ESPECÍFICAS
     // ===================================================================================================
 
     // --- CATÁLOGO ---
@@ -326,17 +326,17 @@ function renderCatalogo(params) {
             productos = []; // No hay productos para esta categoría si no existe
         }
     } else if (params.q) {
-         titulo = 'Resultados de Búsqueda: ' + params.q;
-         const query = params.q.toLowerCase();
-         productos = PRODUCTOS_GLOBAL.filter(p => 
+          titulo = 'Resultados de Búsqueda: ' + params.q;
+          const query = params.q.toLowerCase();
+          productos = PRODUCTOS_GLOBAL.filter(p => 
             p.nombre.toLowerCase().includes(query) || 
             p.modelo.toLowerCase().includes(query)
-        );
+          );
     }
 
     let productosHtml = productos.length > 0 ? productos.map(p => `
         <div class="producto-card">
-            <a href="indice.html?page=detalle-producto&id=${p.id}" data-nav-target="detalle-producto" data-product-id="${p.id}" style="text-decoration: none;">
+            <a href="index.html?page=detalle-producto&id=${p.id}" data-nav-target="detalle-producto" data-product-id="${p.id}" style="text-decoration: none;">
                 <img src="${p.imagenUrl}" alt="Imagen de Producto" style="width:100%; max-height: 150px;">
                 <div class="producto-info">
                     <p class="producto-nombre">${p.nombre}</p>
@@ -403,7 +403,7 @@ function renderCatalogo(params) {
             return `
                 <div class="cart-container">
                     <p class="empty-cart-message">Tu carrito está vacío. ¡Explora nuestros
-                        <a href="indice.html" data-nav-target="catalogo" class="link-productos">productos</a>!
+                        <a href="index.html" data-nav-target="catalogo" class="link-productos">productos</a>!
                     </p>
                 </div>`;
         }
@@ -449,8 +449,8 @@ function renderCatalogo(params) {
         const tarjetasHtml = tarjetas.map(t => `
             <div class="radio-card-option">
                 <input type="radio" name="tarjetaId"
-                       id="card-${t.id}"
-                       value="${t.id}" required>
+                        id="card-${t.id}"
+                        value="${t.id}" required>
                 <label for="card-${t.id}">
                     <i class="fab fa-cc-visa" style="display:${t.tipo === 'VISA' ? 'inline' : 'none'}"></i>
                     <i class="fab fa-cc-mastercard" style="display:${t.tipo === 'MASTERCARD' ? 'inline' : 'none'}"></i>
@@ -483,11 +483,11 @@ function renderCatalogo(params) {
                     ${appState.isLoggedIn ? (isCardEmpty ? `
                         <div class="no-cards-alert">
                             Aún no tienes tarjetas guardadas.
-                            <a href="indice.html?page=perfil&view=tarjeta-add" data-nav-target="tarjeta-add">Añadir una tarjeta</a> para pagar.
+                            <a href="index.html?page=perfil&view=tarjeta-add" data-nav-target="tarjeta-add">Añadir una tarjeta</a> para pagar.
                         </div>` : `
                         <form id="checkoutForm" data-form-type="checkout">${tarjetasHtml}</form>
                     `) : `<div class="no-cards-alert">
-                            Necesitas <a href="indice.html?page=login" data-nav-target="login">Iniciar Sesión</a> para seleccionar un método de pago.
+                            Necesitas <a href="index.html?page=login" data-nav-target="login">Iniciar Sesión</a> para seleccionar un método de pago.
                           </div>`}
                 </div>
 
@@ -508,7 +508,7 @@ function renderCatalogo(params) {
                             PAGAR AHORA
                         </button>
                         ${!appState.isLoggedIn ? `<p class="no-card-warning">Debes iniciar sesión para pagar.</p>` : (isCardEmpty ? `<p class="no-card-warning">Debe añadir una tarjeta para poder pagar.</p>` : '')}
-                        <a href="indice.html" data-nav-target="catalogo" class="secondary-checkout-btn">
+                        <a href="index.html" data-nav-target="catalogo" class="secondary-checkout-btn">
                             Seguir Comprando
                         </a>
                     </div>
@@ -536,7 +536,7 @@ function renderCatalogo(params) {
                         <button type="submit" class="btn-login">Entrar</button>
                     </form>
                     <div class="register-link">
-                        <p>¿No tienes una cuenta? <a href="indice.html?page=register" data-nav-target="register">Regístrate aquí</a></p>
+                        <p>¿No tienes una cuenta? <a href="index.html?page=register" data-nav-target="register">Regístrate aquí</a></p>
                     </div>
                 </div>
             </main>
@@ -566,7 +566,7 @@ function renderCatalogo(params) {
                         <button type="submit" class="btn-login">Registrarse</button>
                     </form>
                     <div class="login-link">
-                        ¿Ya tienes una cuenta? <a href="indice.html?page=login" data-nav-target="login">Inicia sesión aquí</a>
+                        ¿Ya tienes una cuenta? <a href="index.html?page=login" data-nav-target="login">Inicia sesión aquí</a>
                     </div>
                 </div>
             </main>
@@ -618,7 +618,7 @@ function renderPerfil(params) {
                     <button type="submit" class="btn-login">Guardar Tarjeta</button>
                 </form>
                 <div class="register-link">
-                    <a href="indice.html?page=perfil" data-nav-target="perfil">← Volver al Perfil</a>
+                    <a href="index.html?page=perfil" data-nav-target="perfil">← Volver al Perfil</a>
                 </div>
             </div>
         </main>
@@ -703,7 +703,7 @@ function renderPerfil(params) {
                 <div class="profile-section">
                     <h2><i class="fas fa-credit-card"></i> Métodos de Pago</h2>
                     <div class="add-card-btn-container">
-                        <a href="indice.html?page=perfil&view=tarjeta-add" data-nav-target="tarjeta-add" class="btn-primary btn-blue btn-add-card">
+                        <a href="index.html?page=perfil&view=tarjeta-add" data-nav-target="tarjeta-add" class="btn-primary btn-blue btn-add-card">
                             + Añadir Nueva Tarjeta
                         </a>
                     </div>
@@ -711,7 +711,7 @@ function renderPerfil(params) {
                 </div>
 
                 <div class="register-link back-link">
-                    <a href="indice.html" data-nav-target="catalogo">← Volver al Inicio</a>
+                    <a href="index.html" data-nav-target="catalogo">← Volver al Inicio</a>
                 </div>
             </div>
         </main>
@@ -758,7 +758,7 @@ function renderPerfil(params) {
         const canArchive = !pedido.archivado && pedido.estado !== 'PENDIENTE';
 
         return `
-            <a href="indice.html?page=pedidos" data-nav-target="pedidos" class="btn btn-secondary mb-3"><i class="fas fa-arrow-left"></i> Volver a Mis Pedidos</a>
+            <a href="index.html?page=pedidos" data-nav-target="pedidos" class="btn btn-secondary mb-3"><i class="fas fa-arrow-left"></i> Volver a Mis Pedidos</a>
             <h1 style="margin-top: 20px;">Detalle del Pedido #${pedido.id}</h1>
             <div class="row" style="display:flex; gap: 20px;">
                 <div class="col-md-8" style="flex: 2;">
@@ -839,7 +839,7 @@ function renderPerfil(params) {
                     ${content.htmlContent}
                 </div>
                 <div class="back-to-home">
-                    <a href="indice.html" data-nav-target="catalogo" class="btn-back">← Volver al Inicio</a>
+                    <a href="index.html" data-nav-target="catalogo" class="btn-back">← Volver al Inicio</a>
                 </div>
             </div>
         `;
@@ -878,7 +878,7 @@ function getInfoPageContent(page, subPage) {
             <br>• manipulación inadecuada,
             <br>• uso indebido de los productos,
             <br>incluyendo cortocircuitos, variaciones de voltaje o accidentes eléctricos,
-            cuando estos no hayan sido instalados por personal calificado o sin seguir las normativas vigentes.</p>
+            <br>cuando estos no hayan sido instalados por personal calificado o sin seguir las normativas vigentes.</p>
         `;
     } else if (currentPage === 'privacidad') {
         header = 'Política de Privacidad';
@@ -992,731 +992,731 @@ function getInfoPageContent(page, subPage) {
         htmlContent: htmlContent
     };
 }
-    
-    // ===================================================================================================
-    //                             MANEJO DE EVENTOS (Navegación y Lógica)
-    // ===================================================================================================
+    
+    // ===================================================================================================
+    //                             MANEJO DE EVENTOS (Navegación y Lógica)
+    // ===================================================================================================
 
 // --- MANEJO DE NAVEGACIÓN (Para simular las rutas de Thymeleaf) ---
 function navigate(e) {
-    e.preventDefault(); // Detenemos la acción por defecto del enlace (el reload)
-    const target = e.currentTarget;
-    const page = target.getAttribute('data-nav-target');
-    
-    // Limpiar parámetros anteriores
-    appState.currentParams = {};
+    e.preventDefault(); // Detenemos la acción por defecto del enlace (el reload)
+    const target = e.currentTarget;
+    const page = target.getAttribute('data-nav-target');
+    
+    // Limpiar parámetros anteriores
+    appState.currentParams = {};
 
-    if (page === 'catalogo') {
-        appState.currentParams.cat = target.getAttribute('data-cat-name');
-        appState.currentParams.q = target.getAttribute('data-search-query') || new URLSearchParams(window.location.search).get('q');
-    } else if (page === 'detalle-producto') {
-        appState.currentParams.id = parseInt(target.getAttribute('data-product-id'));
-    } else if (page === 'pedido-detalle') {
-        appState.currentParams.id = parseInt(target.getAttribute('data-pedido-id'));
-    } else if (page === 'info-page') {
-        appState.currentParams.page = target.getAttribute('data-page-id');
-    } else if (page === 'tarjeta-add') {
-         appState.currentParams.view = 'tarjeta-add';
-    } else if (page === 'terminos' || page === 'privacidad' || page === 'garantias' || page === 'catalogo-digital') {
-         appState.currentParams.page = page; // Usamos la página como parámetro de info-page
-    }
+    if (page === 'catalogo') {
+        appState.currentParams.cat = target.getAttribute('data-cat-name');
+        appState.currentParams.q = target.getAttribute('data-search-query') || new URLSearchParams(window.location.search).get('q');
+    } else if (page === 'detalle-producto') {
+        appState.currentParams.id = parseInt(target.getAttribute('data-product-id'));
+    } else if (page === 'pedido-detalle') {
+        appState.currentParams.id = parseInt(target.getAttribute('data-pedido-id'));
+    } else if (page === 'info-page') {
+        appState.currentParams.page = target.getAttribute('data-page-id');
+    } else if (page === 'tarjeta-add') {
+          appState.currentParams.view = 'tarjeta-add';
+    } else if (page === 'terminos' || page === 'privacidad' || page === 'garantias' || page === 'catalogo-digital') {
+          appState.currentParams.page = page; // Usamos la página como parámetro de info-page
+    }
 
-    appState.currentPage = page;
-    
-    // Simulación de URL en entorno local: Usamos indice.html?page=TARGET
-    let newPath = 'indice.html';
-    
-    // Usamos el patrón indice.html?page=PAGE&param=VALUE
-    let queryParams = [];
-    
-    // Si la página NO es catálogo base, incluimos el parámetro 'page'
-    if (appState.currentPage !== 'catalogo' || appState.currentParams.cat || appState.currentParams.q) {
-        queryParams.push(`page=${appState.currentPage}`);
-    }
-    
-    // Agregamos parámetros de filtrado si existen
-    if (appState.currentParams.cat) {
-        queryParams.push(`cat=${appState.currentParams.cat}`);
-    } else if (appState.currentParams.q) {
-        queryParams.push(`q=${appState.currentParams.q}`);
-    }
-    
-    // Parámetros de vista o ID
-    if (appState.currentParams.view) {
-        queryParams.push(`view=${appState.currentParams.view}`);
-    }
-    if (appState.currentParams.id) {
-        queryParams.push(`id=${appState.currentParams.id}`);
-    }
-    
-    // Construir la URL final solo si hay parámetros
-    if (queryParams.length > 0) {
-        newPath += `?${queryParams.join('&')}`;
-    }
-    
-    history.pushState(appState, '', newPath); // Usamos la URL limpia para el historial
+    appState.currentPage = page;
+    
+    // Simulación de URL en entorno local: Usamos index.html?page=TARGET
+    let newPath = 'index.html';
+    
+    // Usamos el patrón index.html?page=PAGE&param=VALUE
+    let queryParams = [];
+    
+    // Si la página NO es catálogo base, incluimos el parámetro 'page'
+    if (appState.currentPage !== 'catalogo' || appState.currentParams.cat || appState.currentParams.q) {
+        queryParams.push(`page=${appState.currentPage}`);
+    }
+    
+    // Agregamos parámetros de filtrado si existen
+    if (appState.currentParams.cat) {
+        queryParams.push(`cat=${appState.currentParams.cat}`);
+    } else if (appState.currentParams.q) {
+        queryParams.push(`q=${appState.currentParams.q}`);
+    }
+    
+    // Parámetros de vista o ID
+    if (appState.currentParams.view) {
+        queryParams.push(`view=${appState.currentParams.view}`);
+    }
+    if (appState.currentParams.id) {
+        queryParams.push(`id=${appState.currentParams.id}`);
+    }
+    
+    // Construir la URL final solo si hay parámetros
+    if (queryParams.length > 0) {
+        newPath += `?${queryParams.join('&')}`;
+    }
+    
+    history.pushState(appState, '', newPath); // Usamos la URL limpia para el historial
 
-    renderPage();
+    renderPage();
 }
-    
-    // Adjuntar listeners de navegación global
-    function attachGlobalListeners() {
-        document.querySelectorAll('[data-nav-target]').forEach(link => {
-            link.removeEventListener('click', navigate); // Evitar duplicados
-            link.addEventListener('click', navigate);
-        });
+    
+    // Adjuntar listeners de navegación global
+    function attachGlobalListeners() {
+        document.querySelectorAll('[data-nav-target]').forEach(link => {
+            link.removeEventListener('click', navigate); // Evitar duplicados
+            link.addEventListener('click', navigate);
+        });
 
-        // Search Form (Simulación de búsqueda)
-        const searchForm = document.getElementById('search-form');
-        if (searchForm) {
-            searchForm.removeEventListener('submit', handleSearch);
-            searchForm.addEventListener('submit', handleSearch);
-        }
-        
-        // Logout Button
-        const logoutBtn = document.getElementById('logout-btn');
-        if (logoutBtn) {
-            logoutBtn.removeEventListener('click', handleLogout);
-            logoutBtn.addEventListener('click', handleLogout);
-        }
-        
-        // Footer Accordion (Tu JS original)
-        const footerToggles = document.querySelectorAll('.footer-toggle');
-        footerToggles.forEach(toggle => {
-            toggle.removeEventListener('click', handleFooterToggle);
-            toggle.addEventListener('click', handleFooterToggle);
-        });
+        // Search Form (Simulación de búsqueda)
+        const searchForm = document.getElementById('search-form');
+        if (searchForm) {
+            searchForm.removeEventListener('submit', handleSearch);
+            searchForm.addEventListener('submit', handleSearch);
+        }
+        
+        // Logout Button
+        const logoutBtn = document.getElementById('logout-btn');
+        if (logoutBtn) {
+            logoutBtn.removeEventListener('click', handleLogout);
+            logoutBtn.addEventListener('click', handleLogout);
+        }
+        
+        // Footer Accordion (Tu JS original)
+        const footerToggles = document.querySelectorAll('.footer-toggle');
+        footerToggles.forEach(toggle => {
+            toggle.removeEventListener('click', handleFooterToggle);
+            toggle.addEventListener('click', handleFooterToggle);
+        });
 
-        // Menu Toggle (Tu JS original)
-        const menuToggle = document.getElementById('menu-toggle');
-        if (menuToggle) {
-            menuToggle.removeEventListener('click', handleMenuToggle);
-            menuToggle.addEventListener('click', handleMenuToggle);
-        }
+        // Menu Toggle (Tu JS original)
+        const menuToggle = document.getElementById('menu-toggle');
+        if (menuToggle) {
+            menuToggle.removeEventListener('click', handleMenuToggle);
+            menuToggle.addEventListener('click', handleMenuToggle);
+        }
 
-        // User Menu Toggle (Tu JS original)
-        const userMenuTrigger = document.getElementById('user-menu-trigger');
-        if (userMenuTrigger) {
-             userMenuTrigger.removeEventListener('click', handleUserMenuToggle);
-             userMenuTrigger.addEventListener('click', handleUserMenuToggle);
-             // Listener para cerrar al hacer clic fuera
-             window.removeEventListener('click', closeUserMenuOnClickOutside);
-             window.addEventListener('click', closeUserMenuOnClickOutside);
-             // Listener para evitar cierre al hacer clic dentro
-             const userMenuDropdown = document.getElementById('user-menu-dropdown');
-             if (userMenuDropdown) {
-                 userMenuDropdown.removeEventListener('click', stopPropagation);
-                 userMenuDropdown.addEventListener('click', stopPropagation);
-             }
-        }
-        
-        // Manejo de Alerts (Tu JS original)
-        const flashAlert = document.querySelector('.alert-success, .alert-danger, .alert-info');
-        if (flashAlert) {
-            handleFlashAlert(flashAlert);
-        }
-    }
-    
-    // --- MANEJO DE EVENTOS (FORMULARIOS) ---
-    function attachFormListeners() {
-        document.querySelectorAll('form[data-form-type]').forEach(form => {
-            const formType = form.getAttribute('data-form-type');
-            form.removeEventListener('submit', handleFormSubmit); // Evitar duplicados
-            form.addEventListener('submit', (e) => handleFormSubmit(e, formType));
-        });
-        
-        // Botón Pagar Ahora (fuera del form en cart-view.html)
-        const pagarBtn = document.getElementById('btn-pagar-ahora');
-        if (pagarBtn) {
-             pagarBtn.removeEventListener('click', handleCheckout);
-             pagarBtn.addEventListener('click', handleCheckout);
-        }
-    }
-    
-    // ===================================================================================================
-    //                                  LÓGICA DE SIMULACIÓN DE BACKEND
-    // ===================================================================================================
+        // User Menu Toggle (Tu JS original)
+        const userMenuTrigger = document.getElementById('user-menu-trigger');
+        if (userMenuTrigger) {
+             userMenuTrigger.removeEventListener('click', handleUserMenuToggle);
+             userMenuTrigger.addEventListener('click', handleUserMenuToggle);
+             // Listener para cerrar al hacer clic fuera
+             window.removeEventListener('click', closeUserMenuOnClickOutside);
+             window.addEventListener('click', closeUserMenuOnClickOutside);
+             // Listener para evitar cierre al hacer clic dentro
+             const userMenuDropdown = document.getElementById('user-menu-dropdown');
+             if (userMenuDropdown) {
+                 userMenuDropdown.removeEventListener('click', stopPropagation);
+                 userMenuDropdown.addEventListener('click', stopPropagation);
+             }
+        }
+        
+        // Manejo de Alerts (Tu JS original)
+        const flashAlert = document.querySelector('.alert-success, .alert-danger, .alert-info');
+        if (flashAlert) {
+            handleFlashAlert(flashAlert);
+        }
+    }
+    
+    // --- MANEJO DE EVENTOS (FORMULARIOS) ---
+    function attachFormListeners() {
+        document.querySelectorAll('form[data-form-type]').forEach(form => {
+            const formType = form.getAttribute('data-form-type');
+            form.removeEventListener('submit', handleFormSubmit); // Evitar duplicados
+            form.addEventListener('submit', (e) => handleFormSubmit(e, formType));
+        });
+        
+        // Botón Pagar Ahora (fuera del form en cart-view.html)
+        const pagarBtn = document.getElementById('btn-pagar-ahora');
+        if (pagarBtn) {
+             pagarBtn.removeEventListener('click', handleCheckout);
+             pagarBtn.addEventListener('click', handleCheckout);
+        }
+    }
+    
+    // ===================================================================================================
+    //                                  LÓGICA DE SIMULACIÓN DE BACKEND
+    // ===================================================================================================
 
-    // --- A. SESIÓN Y PERFIL ---
-    function handleLogin(form) {
-        // Simulación: Aceptar solo las credenciales de prueba
-        const email = form.username.value;
-        const password = form.password.value;
+    // --- A. SESIÓN Y PERFIL ---
+    function handleLogin(form) {
+        // Simulación: Aceptar solo las credenciales de prueba
+        const email = form.username.value;
+        const password = form.password.value;
 
-        if (email === 'test@example.com' && password === 'password') {
-            appState.isLoggedIn = true;
-            appState.usuarioNombre = 'Usuario de Prueba';
-            appState.usuarioEmail = email;
-            
-            // Persistir la sesión
-            localStorage.setItem('isLoggedIn', 'true');
-            localStorage.setItem('usuarioNombre', appState.usuarioNombre);
-            localStorage.setItem('usuarioEmail', appState.usuarioEmail);
-            
-            setFlashAlert('success', `¡Bienvenido de nuevo, ${appState.usuarioNombre}!`);
-            
-            // Navegar a catálogo
-            appState.currentPage = 'catalogo';
-            history.pushState(appState, '', 'indice.html'); // CORREGIDO: Redirigir a índice
-            renderPage();
+        if (email === 'test@example.com' && password === 'password') {
+            appState.isLoggedIn = true;
+            appState.usuarioNombre = 'Usuario de Prueba';
+            appState.usuarioEmail = email;
+            
+            // Persistir la sesión
+            localStorage.setItem('isLoggedIn', 'true');
+            localStorage.setItem('usuarioNombre', appState.usuarioNombre);
+            localStorage.setItem('usuarioEmail', appState.usuarioEmail);
+            
+            setFlashAlert('success', `¡Bienvenido de nuevo, ${appState.usuarioNombre}!`);
+            
+            // Navegar a catálogo
+            appState.currentPage = 'catalogo';
+            history.pushState(appState, '', 'index.html'); // CORREGIDO: Redirigir a index
+            renderPage();
 
-        } else {
-            // Mostrar error localmente
-            const errorEl = document.getElementById('login-error-alert');
-            if (errorEl) {
-                errorEl.textContent = 'Email o contraseña incorrectos. Por favor, inténtelo de nuevo.';
-                errorEl.style.display = 'block';
-            }
-        }
-    }
-    
-    function handleLogout() {
-        appState.isLoggedIn = false;
-        appState.usuarioNombre = 'Invitado';
-        appState.usuarioEmail = '';
-        
-        // Limpiar persistencia
-        localStorage.removeItem('isLoggedIn');
-        localStorage.removeItem('usuarioNombre');
-        localStorage.removeItem('usuarioEmail');
+        } else {
+            // Mostrar error localmente
+            const errorEl = document.getElementById('login-error-alert');
+            if (errorEl) {
+                errorEl.textContent = 'Email o contraseña incorrectos. Por favor, inténtelo de nuevo.';
+                errorEl.style.display = 'block';
+            }
+        }
+    }
+    
+    function handleLogout() {
+        appState.isLoggedIn = false;
+        appState.usuarioNombre = 'Invitado';
+        appState.usuarioEmail = '';
+        
+        // Limpiar persistencia
+        localStorage.removeItem('isLoggedIn');
+        localStorage.removeItem('usuarioNombre');
+        localStorage.removeItem('usuarioEmail');
 
-        setFlashAlert('success', '¡Has cerrado sesión correctamente!');
-        
-        // Navegar a catálogo
-        appState.currentPage = 'catalogo';
-        history.pushState(appState, '', 'indice.html'); // CORREGIDO: Redirigir a índice
-        renderPage();
-    }
-    
-    function handleRegister(form) {
-        // Simulación: Simplemente aceptar cualquier registro y loguear
-        const nombre = form.nombre.value;
-        const email = form.email.value;
-        const password = form.password.value; // No se guarda la contraseña, solo el estado de logueado
+        setFlashAlert('success', '¡Has cerrado sesión correctamente!');
+        
+        // Navegar a catálogo
+        appState.currentPage = 'catalogo';
+        history.pushState(appState, '', 'index.html'); // CORREGIDO: Redirigir a index
+        renderPage();
+    }
+    
+    function handleRegister(form) {
+        // Simulación: Simplemente aceptar cualquier registro y loguear
+        const nombre = form.nombre.value;
+        const email = form.email.value;
+        const password = form.password.value; // No se guarda la contraseña, solo el estado de logueado
 
-        if (nombre && email && password) {
-            appState.isLoggedIn = true;
-            appState.usuarioNombre = nombre;
-            appState.usuarioEmail = email;
-            appState.usuario.nombre = nombre; // Actualizar objeto usuario
-            appState.usuario.email = email;
+        if (nombre && email && password) {
+            appState.isLoggedIn = true;
+            appState.usuarioNombre = nombre;
+            appState.usuarioEmail = email;
+            appState.usuario.nombre = nombre; // Actualizar objeto usuario
+            appState.usuario.email = email;
 
-            // Persistir la sesión (simulación de registro)
-            localStorage.setItem('isLoggedIn', 'true');
-            localStorage.setItem('usuarioNombre', appState.usuarioNombre);
-            localStorage.setItem('usuarioEmail', appState.usuarioEmail);
-            
-            setFlashAlert('success', `Cuenta creada con éxito. ¡Bienvenido, ${appState.usuarioNombre}!`);
+            // Persistir la sesión (simulación de registro)
+            localStorage.setItem('isLoggedIn', 'true');
+            localStorage.setItem('usuarioNombre', appState.usuarioNombre);
+            localStorage.setItem('usuarioEmail', appState.usuarioEmail);
+            
+            setFlashAlert('success', `Cuenta creada con éxito. ¡Bienvenido, ${appState.usuarioNombre}!`);
 
-            // Navegar a catálogo
-            appState.currentPage = 'catalogo';
-            history.pushState(appState, '', 'indice.html'); // CORREGIDO: Redirigir a índice
-            renderPage();
-        } else {
-             const errorEl = document.getElementById('register-error-alert');
-             if (errorEl) {
-                 errorEl.textContent = 'Todos los campos son obligatorios.';
-                 errorEl.style.display = 'block';
-             }
-        }
-    }
-    
-    function handleUpdateNombre(form) {
-        const nuevoNombre = form.nombre.value;
-        if (nuevoNombre) {
-            appState.usuario.nombre = nuevoNombre;
-            appState.usuarioNombre = nuevoNombre;
-            localStorage.setItem('usuarioNombre', nuevoNombre);
-            showProfileAlert('success', 'Nombre actualizado correctamente.');
-        }
-    }
-    
-    function handleCambiarEmail(form) {
-        const nuevoEmail = form.nuevoEmail.value;
-        if (nuevoEmail && nuevoEmail !== appState.usuarioEmail) {
-            // Simulación de cambio de email + cierre de sesión
-            appState.usuario.email = nuevoEmail;
-            handleLogout(); // Cierra sesión por seguridad
-            setFlashAlert('success', 'Correo actualizado y sesión cerrada por seguridad. Inicie sesión con su nuevo correo.');
-        } else if (nuevoEmail === appState.usuarioEmail) {
-            showProfileAlert('error', 'El nuevo correo es idéntico al actual.');
-        } else {
-            showProfileAlert('error', 'Por favor, ingrese un correo válido.');
-        }
-    }
-    
-    function handleCambiarPassword(form) {
-        const currentPass = form.currentPassword.value;
-        const newPass = form.newPassword.value;
+            // Navegar a catálogo
+            appState.currentPage = 'catalogo';
+            history.pushState(appState, '', 'index.html'); // CORREGIDO: Redirigir a index
+            renderPage();
+        } else {
+             const errorEl = document.getElementById('register-error-alert');
+             if (errorEl) {
+                 errorEl.textContent = 'Todos los campos son obligatorios.';
+                 errorEl.style.display = 'block';
+             }
+        }
+    }
+    
+    function handleUpdateNombre(form) {
+        const nuevoNombre = form.nombre.value;
+        if (nuevoNombre) {
+            appState.usuario.nombre = nuevoNombre;
+            appState.usuarioNombre = nuevoNombre;
+            localStorage.setItem('usuarioNombre', nuevoNombre);
+            showProfileAlert('success', 'Nombre actualizado correctamente.');
+        }
+    }
+    
+    function handleCambiarEmail(form) {
+        const nuevoEmail = form.nuevoEmail.value;
+        if (nuevoEmail && nuevoEmail !== appState.usuarioEmail) {
+            // Simulación de cambio de email + cierre de sesión
+            appState.usuario.email = nuevoEmail;
+            handleLogout(); // Cierra sesión por seguridad
+            setFlashAlert('success', 'Correo actualizado y sesión cerrada por seguridad. Inicie sesión con su nuevo correo.');
+        } else if (nuevoEmail === appState.usuarioEmail) {
+            showProfileAlert('error', 'El nuevo correo es idéntico al actual.');
+        } else {
+            showProfileAlert('error', 'Por favor, ingrese un correo válido.');
+        }
+    }
+    
+    function handleCambiarPassword(form) {
+        const currentPass = form.currentPassword.value;
+        const newPass = form.newPassword.value;
 
-        // Simulación: solo validamos que no estén vacíos y que no sean iguales
-        if (!currentPass || !newPass) {
-            showProfileAlert('error', 'Por favor, rellene ambos campos de contraseña.');
-            return;
-        }
+        // Simulación: solo validamos que no estén vacíos y que no sean iguales
+        if (!currentPass || !newPass) {
+            showProfileAlert('error', 'Por favor, rellene ambos campos de contraseña.');
+            return;
+        }
 
-        if (currentPass === newPass) {
-             showProfileAlert('error', 'La nueva contraseña debe ser diferente a la actual.');
-             return;
-        }
-        
-        // Simulación: Si pasa la validación básica, asumimos éxito
-        form.currentPassword.value = '';
-        form.newPassword.value = '';
-        showProfileAlert('success', 'Contraseña actualizada correctamente.');
-    }
-    
-    function handleAddCard(form) {
-        const numero = form.numero.value.replace(/\s/g, '');
-        const vencimiento = form.vencimiento.value;
-        const cvv = form.cvv.value;
-        const titular = form.titular.value;
+        if (currentPass === newPass) {
+             showProfileAlert('error', 'La nueva contraseña debe ser diferente a la actual.');
+             return;
+        }
+        
+        // Simulación: Si pasa la validación básica, asumimos éxito
+        form.currentPassword.value = '';
+        form.newPassword.value = '';
+        showProfileAlert('success', 'Contraseña actualizada correctamente.');
+    }
+    
+    function handleAddCard(form) {
+        const numero = form.numero.value.replace(/\s/g, '');
+        const vencimiento = form.vencimiento.value;
+        const cvv = form.cvv.value;
+        const titular = form.titular.value;
 
-        if (numero.length !== 16 || !/^\d{4}\/\d{2}$/.test(vencimiento) || cvv.length < 3 || cvv.length > 4) {
-            document.getElementById('card-add-error').textContent = 'Datos de tarjeta inválidos. Revise el formato.';
-            document.getElementById('card-add-error').style.display = 'block';
-            return;
-        }
-        
-        const lastFour = numero.slice(-4);
-        const cardType = numero.startsWith('4') ? 'VISA' : (numero.startsWith('5') ? 'MASTERCARD' : 'OTRA');
+        if (numero.length !== 16 || !/^\d{4}\/\d{2}$/.test(vencimiento) || cvv.length < 3 || cvv.length > 4) {
+            document.getElementById('card-add-error').textContent = 'Datos de tarjeta inválidos. Revise el formato.';
+            document.getElementById('card-add-error').style.display = 'block';
+            return;
+        }
+        
+        const lastFour = numero.slice(-4);
+        const cardType = numero.startsWith('4') ? 'VISA' : (numero.startsWith('5') ? 'MASTERCARD' : 'OTRA');
 
-        const newCard = {
-            id: generateNextId('Card'), // Genera un ID simulado
-            tipo: cardType,
-            digitosFinales: lastFour,
-            fechaVencimiento: vencimiento,
-        };
+        const newCard = {
+            id: generateNextId('Card'), // Genera un ID simulado
+            tipo: cardType,
+            digitosFinales: lastFour,
+            fechaVencimiento: vencimiento,
+        };
 
-        appState.usuario.tarjetas.push(newCard);
-        localStorage.setItem('userCards', JSON.stringify(appState.usuario.tarjetas));
+        appState.usuario.tarjetas.push(newCard);
+        localStorage.setItem('userCards', JSON.stringify(appState.usuario.tarjetas));
 
-        setFlashAlert('success', `Tarjeta ${cardType} **** ${lastFour} guardada con éxito.`);
-        
-        // Navegar a perfil principal
-        appState.currentPage = 'perfil';
-        history.pushState(appState, '', 'indice.html?page=perfil'); // CORREGIDO
-        renderPage();
-    }
-    
-    function handleDeleteCard(form) {
-        const tarjetaId = parseInt(form.tarjetaId.value);
-        
-        appState.usuario.tarjetas = appState.usuario.tarjetas.filter(t => t.id !== tarjetaId);
-        localStorage.setItem('userCards', JSON.stringify(appState.usuario.tarjetas));
-        
-        cerrarModal(); // Cierra el modal de eliminación
-        setFlashAlert('success', 'Tarjeta eliminada correctamente.');
-        
-        // Navegar a perfil principal
-        appState.currentPage = 'perfil';
-        history.pushState(appState, '', 'indice.html?page=perfil'); // CORREGIDO
-        renderPage();
-    }
-    
-    // --- B. CARRITO Y PEDIDOS ---
-    
-    function handleAddToCart(form) {
-        const productoId = parseInt(form.productoId.value);
-        const cantidadInput = form.querySelector('input[name="cantidad"]');
-        const cantidad = parseInt(cantidadInput ? cantidadInput.value : 1);
-        
-        if (cantidad <= 0 || isNaN(cantidad)) return;
+        setFlashAlert('success', `Tarjeta ${cardType} **** ${lastFour} guardada con éxito.`);
+        
+        // Navegar a perfil principal
+        appState.currentPage = 'perfil';
+        history.pushState(appState, '', 'index.html?page=perfil'); // CORREGIDO
+        renderPage();
+    }
+    
+    function handleDeleteCard(form) {
+        const tarjetaId = parseInt(form.tarjetaId.value);
+        
+        appState.usuario.tarjetas = appState.usuario.tarjetas.filter(t => t.id !== tarjetaId);
+        localStorage.setItem('userCards', JSON.stringify(appState.usuario.tarjetas));
+        
+        cerrarModal(); // Cierra el modal de eliminación
+        setFlashAlert('success', 'Tarjeta eliminada correctamente.');
+        
+        // Navegar a perfil principal
+        appState.currentPage = 'perfil';
+        history.pushState(appState, '', 'index.html?page=perfil'); // CORREGIDO
+        renderPage();
+    }
+    
+    // --- B. CARRITO Y PEDIDOS ---
+    
+    function handleAddToCart(form) {
+        const productoId = parseInt(form.productoId.value);
+        const cantidadInput = form.querySelector('input[name="cantidad"]');
+        const cantidad = parseInt(cantidadInput ? cantidadInput.value : 1);
+        
+        if (cantidad <= 0 || isNaN(cantidad)) return;
 
-        const existingItem = appState.cart.find(item => item.productoId === productoId);
-        const producto = findProductById(productoId);
+        const existingItem = appState.cart.find(item => item.productoId === productoId);
+        const producto = findProductById(productoId);
 
-        if (!producto) {
-             setFlashAlert('error', 'Producto no encontrado.');
-             return;
-        }
+        if (!producto) {
+             setFlashAlert('error', 'Producto no encontrado.');
+             return;
+        }
 
-        if (existingItem) {
-            existingItem.cantidad += cantidad;
-        } else {
-            appState.cart.push({ productoId, cantidad });
-        }
-        
-        localStorage.setItem('cartItems', JSON.stringify(appState.cart));
-        setFlashAlert('success', `${cantidad} x ${producto.nombre} añadido al carrito.`);
-        
-        // El carrito se actualiza con el `updateUI()` que se llama en `renderPage()`
-        // En el caso del catálogo, recargar solo el header/footer es suficiente para ver el cambio.
-        updateUI(); // Para actualizar solo el contador sin recargar toda la página
-        
-        // Si estamos en la página de detalle, limpiamos el input de cantidad
-        if (cantidadInput) cantidadInput.value = 1;
-    }
-    
-    function handleCartAction(productId, action) {
-        let product;
-        
-        appState.cart = appState.cart.map(item => {
-            if (item.productoId === productId) {
-                product = findProductById(item.productoId);
-                
-                if (action === 'increase') {
-                    item.cantidad++;
-                    setFlashAlert('success', `Añadido 1 unidad de ${product.nombre}.`);
-                } else if (action === 'decrease') {
-                    item.cantidad--;
-                    if (item.cantidad < 1) item.cantidad = 1; // Mínimo 1
-                    setFlashAlert('success', `Eliminada 1 unidad de ${product.nombre}.`);
-                }
-            }
-            return item;
-        }).filter(item => item.cantidad > 0);
-        
-        if (action === 'remove') {
-             const index = appState.cart.findIndex(item => item.productoId === productId);
-             if (index > -1) {
-                 product = findProductById(appState.cart[index].productoId);
-                 appState.cart.splice(index, 1);
-                 setFlashAlert('success', `Producto ${product.nombre} eliminado del carrito.`);
-             }
-        }
-        
-        localStorage.setItem('cartItems', JSON.stringify(appState.cart));
-        
-        // Recargar solo la vista del carrito para ver los cambios
-        if (appState.currentPage === 'cart') {
-             history.pushState(appState, '', 'indice.html?page=cart'); // CORREGIDO
-             renderPage();
-        } else {
-             updateUI();
-        }
-    }
-    
-    function handleCheckout() {
-        if (!appState.isLoggedIn) {
-             setFlashAlert('error', 'Debes iniciar sesión para completar el pago.');
-             appState.currentPage = 'login';
-             history.pushState(appState, '', 'indice.html?page=login'); // CORREGIDO
-             renderPage();
-             return;
-        }
-        
-        if (appState.cart.length === 0) {
-             setFlashAlert('error', 'El carrito está vacío. No se puede procesar el pago.');
-             appState.currentPage = 'catalogo';
-             history.pushState(appState, '', 'indice.html'); // CORREGIDO
-             renderPage();
-             return;
-        }
-        
-        const selectedCard = document.querySelector('#checkoutForm input[name="tarjetaId"]:checked');
-        if (!selectedCard) {
-            setFlashAlert('error', 'Por favor, selecciona un método de pago.');
-            return;
-        }
-        
-        // Simulación: Creación de un Pedido (lo que antes hacía el backend)
-        const total = appState.cart.reduce((sum, item) => {
-            const producto = findProductById(item.productoId);
-            return sum + (producto ? producto.precio * item.cantidad : 0);
-        }, 0);
-        
-        const newPedido = {
-            id: generateNextId('Pedido'),
-            fechaCreacion: new Date().toLocaleDateString('es-MX', { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit' }),
-            estado: 'PENDIENTE', // Siempre inicia como pendiente
-            montoTotal: total,
-            archivado: false,
-            // Detalle del pedido (copia de los items del carrito)
-            detalles: appState.cart.map(item => {
-                const producto = findProductById(item.productoId);
-                return {
-                    imagenUrl: producto.imagenUrl,
-                    nombreProducto: producto.nombre,
-                    modeloProducto: producto.modelo,
-                    cantidad: item.cantidad,
-                    precioUnitario: producto.precio,
-                };
-            }),
-        };
+        if (existingItem) {
+            existingItem.cantidad += cantidad;
+        } else {
+            appState.cart.push({ productoId, cantidad });
+        }
+        
+        localStorage.setItem('cartItems', JSON.stringify(appState.cart));
+        setFlashAlert('success', `${cantidad} x ${producto.nombre} añadido al carrito.`);
+        
+        // El carrito se actualiza con el `updateUI()` que se llama en `renderPage()`
+        // En el caso del catálogo, recargar solo el header/footer es suficiente para ver el cambio.
+        updateUI(); // Para actualizar solo el contador sin recargar toda la página
+        
+        // Si estamos en la página de detalle, limpiamos el input de cantidad
+        if (cantidadInput) cantidadInput.value = 1;
+    }
+    
+    function handleCartAction(productId, action) {
+        let product;
+        
+        appState.cart = appState.cart.map(item => {
+            if (item.productoId === productId) {
+                product = findProductById(item.productoId);
+                
+                if (action === 'increase') {
+                    item.cantidad++;
+                    setFlashAlert('success', `Añadido 1 unidad de ${product.nombre}.`);
+                } else if (action === 'decrease') {
+                    item.cantidad--;
+                    if (item.cantidad < 1) item.cantidad = 1; // Mínimo 1
+                    setFlashAlert('success', `Eliminada 1 unidad de ${product.nombre}.`);
+                }
+            }
+            return item;
+        }).filter(item => item.cantidad > 0);
+        
+        if (action === 'remove') {
+              const index = appState.cart.findIndex(item => item.productoId === productId);
+              if (index > -1) {
+                  product = findProductById(appState.cart[index].productoId);
+                  appState.cart.splice(index, 1);
+                  setFlashAlert('success', `Producto ${product.nombre} eliminado del carrito.`);
+              }
+        }
+        
+        localStorage.setItem('cartItems', JSON.stringify(appState.cart));
+        
+        // Recargar solo la vista del carrito para ver los cambios
+        if (appState.currentPage === 'cart') {
+              history.pushState(appState, '', 'index.html?page=cart'); // CORREGIDO
+              renderPage();
+        } else {
+              updateUI();
+        }
+    }
+    
+    function handleCheckout() {
+        if (!appState.isLoggedIn) {
+              setFlashAlert('error', 'Debes iniciar sesión para completar el pago.');
+              appState.currentPage = 'login';
+              history.pushState(appState, '', 'index.html?page=login'); // CORREGIDO
+              renderPage();
+              return;
+        }
+        
+        if (appState.cart.length === 0) {
+              setFlashAlert('error', 'El carrito está vacío. No se puede procesar el pago.');
+              appState.currentPage = 'catalogo';
+              history.pushState(appState, '', 'index.html'); // CORREGIDO
+              renderPage();
+              return;
+        }
+        
+        const selectedCard = document.querySelector('#checkoutForm input[name="tarjetaId"]:checked');
+        if (!selectedCard) {
+            setFlashAlert('error', 'Por favor, selecciona un método de pago.');
+            return;
+        }
+        
+        // Simulación: Creación de un Pedido (lo que antes hacía el backend)
+        const total = appState.cart.reduce((sum, item) => {
+            const producto = findProductById(item.productoId);
+            return sum + (producto ? producto.precio * item.cantidad : 0);
+        }, 0);
+        
+        const newPedido = {
+            id: generateNextId('Pedido'),
+            fechaCreacion: new Date().toLocaleDateString('es-MX', { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit' }),
+            estado: 'PENDIENTE', // Siempre inicia como pendiente
+            montoTotal: total,
+            archivado: false,
+            // Detalle del pedido (copia de los items del carrito)
+            detalles: appState.cart.map(item => {
+                const producto = findProductById(item.productoId);
+                return {
+                    imagenUrl: producto.imagenUrl,
+                    nombreProducto: producto.nombre,
+                    modeloProducto: producto.modelo,
+                    cantidad: item.cantidad,
+                    precioUnitario: producto.precio,
+                };
+            }),
+        };
 
-        appState.pedidos.unshift(newPedido); // Añadir al inicio
-        localStorage.setItem('userOrders', JSON.stringify(appState.pedidos));
-        
-        // Vaciar el carrito
-        appState.cart = [];
-        localStorage.setItem('cartItems', JSON.stringify(appState.cart));
-        
-        setFlashAlert('success', `¡Pedido #${newPedido.id} realizado con éxito!`);
-        
-        // Navegar a la lista de pedidos
-        appState.currentPage = 'pedidos';
-        history.pushState(appState, '', 'indice.html?page=pedidos'); // CORREGIDO
-        renderPage();
-    }
-    
-    function handleCancelPedido(pedidoId) {
-        const pedido = appState.pedidos.find(p => p.id === pedidoId);
-        if (pedido && pedido.estado === 'PENDIENTE' && confirm(`¿Estás seguro de que deseas cancelar el pedido #${pedidoId}?`)) {
-            pedido.estado = 'CANCELADO';
-            localStorage.setItem('userOrders', JSON.stringify(appState.pedidos));
-            setFlashAlert('success', `Pedido #${pedidoId} ha sido cancelado.`);
-            
-            // Navegar a pedidos
-            appState.currentPage = 'pedidos';
-            history.pushState(appState, '', 'indice.html?page=pedidos'); // CORREGIDO
-            renderPage();
-        }
-    }
-    
-    function handleArchivePedido(pedidoId) {
-        const pedido = appState.pedidos.find(p => p.id === pedidoId);
-        if (pedido) {
-            pedido.archivado = true;
-            localStorage.setItem('userOrders', JSON.stringify(appState.pedidos));
-            setFlashAlert('success', `Pedido #${pedidoId} ha sido archivado.`);
-            
-            // Navegar a pedidos
-            appState.currentPage = 'pedidos';
-            history.pushState(appState, '', 'indice.html?page=pedidos'); // CORREGIDO
-            renderPage();
-    }
-    } // <--- LLAVE DE CIERRE AGREGADA AQUÍ
-    
-    // --- C. MANEJO DE FORMULARIOS GENERAL ---
+        appState.pedidos.unshift(newPedido); // Añadir al inicio
+        localStorage.setItem('userOrders', JSON.stringify(appState.pedidos));
+        
+        // Vaciar el carrito
+        appState.cart = [];
+        localStorage.setItem('cartItems', JSON.stringify(appState.cart));
+        
+        setFlashAlert('success', `¡Pedido #${newPedido.id} realizado con éxito!`);
+        
+        // Navegar a la lista de pedidos
+        appState.currentPage = 'pedidos';
+        history.pushState(appState, '', 'index.html?page=pedidos'); // CORREGIDO
+        renderPage();
+    }
+    
+    function handleCancelPedido(pedidoId) {
+        const pedido = appState.pedidos.find(p => p.id === pedidoId);
+        if (pedido && pedido.estado === 'PENDIENTE' && confirm(`¿Estás seguro de que deseas cancelar el pedido #${pedidoId}?`)) {
+            pedido.estado = 'CANCELADO';
+            localStorage.setItem('userOrders', JSON.stringify(appState.pedidos));
+            setFlashAlert('success', `Pedido #${pedidoId} ha sido cancelado.`);
+            
+            // Navegar a pedidos
+            appState.currentPage = 'pedidos';
+            history.pushState(appState, '', 'index.html?page=pedidos'); // CORREGIDO
+            renderPage();
+        }
+    }
+    
+    function handleArchivePedido(pedidoId) {
+        const pedido = appState.pedidos.find(p => p.id === pedidoId);
+        if (pedido) {
+            pedido.archivado = true;
+            localStorage.setItem('userOrders', JSON.stringify(appState.pedidos));
+            setFlashAlert('success', `Pedido #${pedidoId} ha sido archivado.`);
+            
+            // Navegar a pedidos
+            appState.currentPage = 'pedidos';
+            history.pushState(appState, '', 'index.html?page=pedidos'); // CORREGIDO
+            renderPage();
+        }
+    }
+    
+    // --- C. MANEJO DE FORMULARIOS GENERAL ---
 
-    function handleFormSubmit(e, formType) {
-        e.preventDefault();
-        const form = e.currentTarget;
+    function handleFormSubmit(e, formType) {
+        e.preventDefault();
+        const form = e.currentTarget;
 
-        switch (formType) {
-            case 'login': handleLogin(form); break;
-            case 'register': handleRegister(form); break;
-            case 'add-to-cart': handleAddToCart(form); break;
-            case 'update-nombre': handleUpdateNombre(form); break;
-            case 'cambiar-email': handleCambiarEmail(form); break;
-            case 'cambiar-password': handleCambiarPassword(form); break;
-            case 'add-card': handleAddCard(form); break;
-            case 'delete-card': handleDeleteCard(form); break;
-            // Botones fuera de formularios
-            case 'cancel-pedido': handleCancelPedido(parseInt(form.getAttribute('data-pedido-id'))); break;
-            case 'archive-pedido': handleArchivePedido(parseInt(form.getAttribute('data-pedido-id'))); break;
-            default: console.log('Formulario no manejado:', formType);
-        }
-    }
-    
-    // --- D. MANEJO DE BÚSQUEDA ---
-    function handleSearch(e) {
-        e.preventDefault();
-        const query = e.currentTarget.q.value.trim();
+        switch (formType) {
+            case 'login': handleLogin(form); break;
+            case 'register': handleRegister(form); break;
+            case 'add-to-cart': handleAddToCart(form); break;
+            case 'update-nombre': handleUpdateNombre(form); break;
+            case 'cambiar-email': handleCambiarEmail(form); break;
+            case 'cambiar-password': handleCambiarPassword(form); break;
+            case 'add-card': handleAddCard(form); break;
+            case 'delete-card': handleDeleteCard(form); break;
+            // Botones fuera de formularios
+            case 'cancel-pedido': handleCancelPedido(parseInt(form.getAttribute('data-pedido-id'))); break;
+            case 'archive-pedido': handleArchivePedido(parseInt(form.getAttribute('data-pedido-id'))); break;
+            default: console.log('Formulario no manejado:', formType);
+        }
+    }
+    
+    // --- D. MANEJO DE BÚSQUEDA ---
+    function handleSearch(e) {
+        e.preventDefault();
+        const query = e.currentTarget.q.value.trim();
 
-        if (query) {
-            appState.currentPage = 'catalogo';
-            appState.currentParams.q = query;
-            history.pushState(appState, '', `indice.html?page=catalogo&q=${query}`); // CORREGIDO
-            renderPage();
-        } else {
-            // Navegar a catálogo base si la búsqueda está vacía
-            appState.currentPage = 'catalogo';
-            appState.currentParams = {};
-            history.pushState(appState, '', 'indice.html'); // CORREGIDO
-            renderPage();
-        }
-    }
+        if (query) {
+            appState.currentPage = 'catalogo';
+            appState.currentParams.q = query;
+            history.pushState(appState, '', `index.html?page=catalogo&q=${query}`); // CORREGIDO
+            renderPage();
+        } else {
+            // Navegar a catálogo base si la búsqueda está vacía
+            appState.currentPage = 'catalogo';
+            appState.currentParams = {};
+            history.pushState(appState, '', 'index.html'); // CORREGIDO
+            renderPage();
+        }
+    }
 
-    // ===================================================================================================
-    //                                  MANEJO DE EVENTOS ESPECÍFICOS DEL DOM
-    // ===================================================================================================
+    // ===================================================================================================
+    //                                  MANEJO DE EVENTOS ESPECÍFICOS DEL DOM
+    // ===================================================================================================
 
-    // --- Carrrito (Aumentar/Disminuir/Eliminar) ---
-    function attachCartListeners() {
-        document.querySelectorAll('[data-cart-action]').forEach(btn => {
-            btn.removeEventListener('click', handleCartBtnClick);
-            btn.addEventListener('click', handleCartBtnClick);
-        });
-    }
+    // --- Carrrito (Aumentar/Disminuir/Eliminar) ---
+    function attachCartListeners() {
+        document.querySelectorAll('[data-cart-action]').forEach(btn => {
+            btn.removeEventListener('click', handleCartBtnClick);
+            btn.addEventListener('click', handleCartBtnClick);
+        });
+    }
 
-    function handleCartBtnClick(e) {
-        const btn = e.currentTarget;
-        const action = btn.getAttribute('data-cart-action');
-        const productId = parseInt(btn.getAttribute('data-product-id'));
-        
-        handleCartAction(productId, action);
-    }
-    
-    // --- Perfil (Modal de Tarjeta) ---
-    function attachProfileListeners() {
-        // La lógica de abrir/cerrar modal está adjunta a window.abrirModalEliminar / window.cerrarModal
-        // que son funciones globales para que el HTML pueda llamarlas directamente.
-        // Solo necesitamos que el formulario de eliminación use el listener adecuado
-        const deleteCardForm = document.getElementById('formEliminarTarjeta');
-        if (deleteCardForm) {
-            deleteCardForm.removeEventListener('submit', handleFormSubmit);
-            deleteCardForm.addEventListener('submit', (e) => handleFormSubmit(e, 'delete-card'));
-        }
-    }
-    
-    // --- Pedido Detalle (Modal de Archivar) ---
-    function attachPedidoDetailModal() {
-        const modalArchivar = document.getElementById("archiveModal");
-        const openButtonArchivar = document.getElementById("openArchiveModal");
+    function handleCartBtnClick(e) {
+        const btn = e.currentTarget;
+        const action = btn.getAttribute('data-cart-action');
+        const productId = parseInt(btn.getAttribute('data-product-id'));
+        
+        handleCartAction(productId, action);
+    }
+    
+    // --- Perfil (Modal de Tarjeta) ---
+    function attachProfileListeners() {
+        // La lógica de abrir/cerrar modal está adjunta a window.abrirModalEliminar / window.cerrarModal
+        // que son funciones globales para que el HTML pueda llamarlas directamente.
+        // Solo necesitamos que el formulario de eliminación use el listener adecuado
+        const deleteCardForm = document.getElementById('formEliminarTarjeta');
+        if (deleteCardForm) {
+            deleteCardForm.removeEventListener('submit', handleFormSubmit);
+            deleteCardForm.addEventListener('submit', (e) => handleFormSubmit(e, 'delete-card'));
+        }
+    }
+    
+    // --- Pedido Detalle (Modal de Archivar) ---
+    function attachPedidoDetailModal() {
+        const modalArchivar = document.getElementById("archiveModal");
+        const openButtonArchivar = document.getElementById("openArchiveModal");
 
-        if (modalArchivar) {
-            const closeButtonArchivar = modalArchivar.querySelector(".close-button");
-            const cancelButtonArchivar = modalArchivar.querySelector(".btn-modal-cancel");
-            const confirmButtonArchivar = modalArchivar.querySelector(".btn-modal-confirm-archive");
-            const pedidoId = confirmButtonArchivar ? parseInt(confirmButtonArchivar.getAttribute('data-pedido-id')) : null;
+        if (modalArchivar) {
+            const closeButtonArchivar = modalArchivar.querySelector(".close-button");
+            const cancelButtonArchivar = modalArchivar.querySelector(".btn-modal-cancel");
+            const confirmButtonArchivar = modalArchivar.querySelector(".btn-modal-confirm-archive");
+            const pedidoId = confirmButtonArchivar ? parseInt(confirmButtonArchivar.getAttribute('data-pedido-id')) : null;
 
-            // --- A. Abrir Modal ---
-            if (openButtonArchivar) {
-                openButtonArchivar.addEventListener('click', () => {
-                    modalArchivar.style.display = 'flex';
-                });
-            }
+            // --- A. Abrir Modal ---
+            if (openButtonArchivar) {
+                openButtonArchivar.addEventListener('click', () => {
+                    modalArchivar.style.display = 'flex';
+                });
+            }
 
-            // --- B. Cerrar Modal con X o Cancelar ---
-            const closeModal = () => modalArchivar.style.display = 'none';
-            if (closeButtonArchivar) closeButtonArchivar.addEventListener('click', closeModal);
-            if (cancelButtonArchivar) cancelButtonArchivar.addEventListener('click', closeModal);
+            // --- B. Cerrar Modal con X o Cancelar ---
+            const closeModal = () => modalArchivar.style.display = 'none';
+            if (closeButtonArchivar) closeButtonArchivar.addEventListener('click', closeModal);
+            if (cancelButtonArchivar) cancelButtonArchivar.addEventListener('click', closeModal);
 
-            // --- C. Confirmar Archivar ---
-            if (confirmButtonArchivar && pedidoId) {
-                confirmButtonArchivar.removeEventListener('click', handleArchiveClick);
-                confirmButtonArchivar.addEventListener('click', handleArchiveClick);
-            }
+            // --- C. Confirmar Archivar ---
+            if (confirmButtonArchivar && pedidoId) {
+                confirmButtonArchivar.removeEventListener('click', handleArchiveClick);
+                confirmButtonArchivar.addEventListener('click', handleArchiveClick);
+            }
 
-            // --- D. Cerrar Modal si se hace clic fuera (Overlay) ---
-            window.removeEventListener('click', handleModalOverlayClick);
-            window.addEventListener('click', handleModalOverlayClick);
-        }
+            // --- D. Cerrar Modal si se hace clic fuera (Overlay) ---
+            window.removeEventListener('click', handleModalOverlayClick);
+            window.addEventListener('click', handleModalOverlayClick);
+        }
 
-        // Manejo de Cancelar Pedido (botón fuera del modal)
-        const cancelBtn = document.querySelector('.btn-cancel[data-form-type="cancel-pedido"]');
-        if (cancelBtn) {
-            cancelBtn.removeEventListener('click', handleCancelClick);
-            cancelBtn.addEventListener('click', handleCancelClick);
-        }
-    }
-    
-    // Handlers para el modal de pedido
-    function handleArchiveClick(e) {
-        e.preventDefault();
-        const pedidoId = parseInt(e.currentTarget.getAttribute('data-pedido-id'));
-        handleArchivePedido(pedidoId);
-    }
+        // Manejo de Cancelar Pedido (botón fuera del modal)
+        const cancelBtn = document.querySelector('.btn-cancel[data-form-type="cancel-pedido"]');
+        if (cancelBtn) {
+            cancelBtn.removeEventListener('click', handleCancelClick);
+            cancelBtn.addEventListener('click', handleCancelClick);
+        }
+    }
+    
+    // Handlers para el modal de pedido
+    function handleArchiveClick(e) {
+        e.preventDefault();
+        const pedidoId = parseInt(e.currentTarget.getAttribute('data-pedido-id'));
+        handleArchivePedido(pedidoId);
+    }
 
-    function handleCancelClick(e) {
-        e.preventDefault();
-        const pedidoId = parseInt(e.currentTarget.getAttribute('data-pedido-id'));
-        handleCancelPedido(pedidoId);
-    }
-    
-    function handleModalOverlayClick(event) {
-        const modalArchivar = document.getElementById("archiveModal");
-        if (event.target === modalArchivar) {
-            modalArchivar.style.display = 'none';
-        }
-    }
+    function handleCancelClick(e) {
+        e.preventDefault();
+        const pedidoId = parseInt(e.currentTarget.getAttribute('data-pedido-id'));
+        handleCancelPedido(pedidoId);
+    }
+    
+    function handleModalOverlayClick(event) {
+        const modalArchivar = document.getElementById("archiveModal");
+        if (event.target === modalArchivar) {
+            modalArchivar.style.display = 'none';
+        }
+    }
 
-    // --- FUNCIONES DE MANEJO DE DOM ORIGINALES (Ajustadas) ---
+    // --- FUNCIONES DE MANEJO DE DOM ORIGINALES (Ajustadas) ---
 
-    function stopPropagation(event) {
-        event.stopPropagation();
-    }
-    
-    function handleFooterToggle(e) {
-        if (window.innerWidth <= 769) {
-            const toggle = e.currentTarget;
-            const targetId = toggle.getAttribute('data-target');
-            const targetContent = document.getElementById(targetId);
+    function stopPropagation(event) {
+        event.stopPropagation();
+    }
+    
+    function handleFooterToggle(e) {
+        if (window.innerWidth <= 769) {
+            const toggle = e.currentTarget;
+            const targetId = toggle.getAttribute('data-target');
+            const targetContent = document.getElementById(targetId);
 
-            if (targetContent) {
-                document.querySelectorAll('.footer-content.is-active').forEach(openContent => {
-                    if (openContent.id !== targetId) {
-                        openContent.classList.remove('is-active');
-                        const relatedToggle = document.querySelector(`[data-target="${openContent.id}"]`);
-                        if (relatedToggle) relatedToggle.classList.remove('is-active');
-                    }
-                });
+            if (targetContent) {
+                document.querySelectorAll('.footer-content.is-active').forEach(openContent => {
+                    if (openContent.id !== targetId) {
+                        openContent.classList.remove('is-active');
+                        const relatedToggle = document.querySelector(`[data-target="${openContent.id}"]`);
+                        if (relatedToggle) relatedToggle.classList.remove('is-active');
+                    }
+                });
 
-                targetContent.classList.toggle('is-active');
-                toggle.classList.toggle('is-active');
-            }
-        }
-    }
+                targetContent.classList.toggle('is-active');
+                toggle.classList.toggle('is-active');
+            }
+        }
+    }
 
-    function handleMenuToggle() {
-        const mainMenuContainer = document.getElementById('main-menu');
-        if (mainMenuContainer) {
-            mainMenuContainer.classList.toggle('is-open');
-        }
-    }
-    
-    function handleUserMenuToggle(event) {
-        event.stopPropagation();
-        const userMenuDropdown = document.getElementById('user-menu-dropdown');
-        if (userMenuDropdown) {
-             userMenuDropdown.classList.toggle('is-active');
-        }
-    }
+    function handleMenuToggle() {
+        const mainMenuContainer = document.getElementById('main-menu');
+        if (mainMenuContainer) {
+            mainMenuContainer.classList.toggle('is-open');
+        }
+    }
+    
+    function handleUserMenuToggle(event) {
+        event.stopPropagation();
+        const userMenuDropdown = document.getElementById('user-menu-dropdown');
+        if (userMenuDropdown) {
+             userMenuDropdown.classList.toggle('is-active');
+        }
+    }
 
-    function closeUserMenuOnClickOutside() {
-        const userMenuDropdown = document.getElementById('user-menu-dropdown');
-        if (userMenuDropdown && userMenuDropdown.classList.contains('is-active')) {
-            userMenuDropdown.classList.remove('is-active');
-        }
-    }
+    function closeUserMenuOnClickOutside() {
+        const userMenuDropdown = document.getElementById('user-menu-dropdown');
+        if (userMenuDropdown && userMenuDropdown.classList.contains('is-active')) {
+            userMenuDropdown.classList.remove('is-active');
+        }
+    }
 
-    // --- FUNCIÓN DE ALERTA RÁPIDA (Reemplazo de Flash Message de Backend) ---
-    function setFlashAlert(type, message) {
-        const alertHtml = `<div class="alert alert-${type}">${message}</div>`;
-        localStorage.setItem('flashAlert', alertHtml);
-    }
-    
-    function showProfileAlert(type, message) {
-        const alertEl = document.getElementById('profile-alert');
-        if (alertEl) {
-            alertEl.className = `alert alert-${type}`;
-            alertEl.textContent = message;
-            alertEl.style.display = 'block';
-            handleFlashAlert(alertEl);
-        }
-    }
+    // --- FUNCIÓN DE ALERTA RÁPIDA (Reemplazo de Flash Message de Backend) ---
+    function setFlashAlert(type, message) {
+        const alertHtml = `<div class="alert alert-${type}">${message}</div>`;
+        localStorage.setItem('flashAlert', alertHtml);
+    }
+    
+    function showProfileAlert(type, message) {
+        const alertEl = document.getElementById('profile-alert');
+        if (alertEl) {
+            alertEl.className = `alert alert-${type}`;
+            alertEl.textContent = message;
+            alertEl.style.display = 'block';
+            handleFlashAlert(alertEl);
+        }
+    }
 
-    function handleFlashAlert(flashAlert) {
-        // 1. Esperar 4 segundos (4000 milisegundos)
-        setTimeout(() => {
-            // 2. Aplicar la animación de salida
-            flashAlert.style.animation = 'fadeOutUp 0.5s ease-in forwards';
+    function handleFlashAlert(flashAlert) {
+        // 1. Esperar 4 segundos (4000 milisegundos)
+        setTimeout(() => {
+            // 2. Aplicar la animación de salida
+            flashAlert.style.animation = 'fadeOutUp 0.5s ease-in forwards';
 
-            // 3. Esperar a que termine la animación (0.5s) y quitar el elemento del DOM
-            setTimeout(() => {
-                flashAlert.remove();
-            }, 500); // 500ms = 0.5s
+            // 3. Esperar a que termine la animación (0.5s) y quitar el elemento del DOM
+            setTimeout(() => {
+                flashAlert.remove();
+            }, 500); // 500ms = 0.5s
 
-        }, 4000); // 4000ms = 4 segundos
-    }
-    
-    // --- Función de utilería para el título de la página ---
-    function getPageTitle(page, params) {
-        switch (page) {
-            case 'catalogo': return params.cat ? `Catálogo: ${params.cat}` : (params.q ? `Búsqueda: ${params.q}` : 'Catálogo Principal');
-            case 'detalle-producto': {
-                const p = findProductById(params.id);
-                return p ? p.nombre : 'Producto';
-            }
-            case 'cart': return 'Carrito de Compras';
-            case 'login': return 'Iniciar Sesión';
-            case 'register': return 'Registro';
-            case 'perfil': return 'Mi Perfil';
-            case 'tarjeta-add': return 'Añadir Tarjeta';
-            case 'pedidos': return 'Mis Pedidos';
-            case 'pedido-detalle': return `Detalle Pedido #${params.id}`;
-            case 'terminos': return 'Términos y Condiciones';
-            case 'privacidad': return 'Política de Privacidad';
-            case 'garantias': return 'Información de Garantías';
-            case 'catalogo-digital': return 'Catálogo Digital';
-            case 'info-page': 
-                if (params.page === 'acerca') return 'Acerca de Nosotros';
-                if (params.page === 'tiendas') return 'Ubicación de Tiendas';
-                if (params.page === 'empleo') return 'Únete al equipo';
-                return 'Información';
-            default: return 'ELECTRO SHOP';
-        }
-    }
+        }, 4000); // 4000ms = 4 segundos
+    }
+    
+    // --- Función de utilería para el título de la página ---
+    function getPageTitle(page, params) {
+        switch (page) {
+            case 'catalogo': return params.cat ? `Catálogo: ${params.cat}` : (params.q ? `Búsqueda: ${params.q}` : 'Catálogo Principal');
+            case 'detalle-producto': {
+                const p = findProductById(params.id);
+                return p ? p.nombre : 'Producto';
+            }
+            case 'cart': return 'Carrito de Compras';
+            case 'login': return 'Iniciar Sesión';
+            case 'register': return 'Registro';
+            case 'perfil': return 'Mi Perfil';
+            case 'tarjeta-add': return 'Añadir Tarjeta';
+            case 'pedidos': return 'Mis Pedidos';
+            case 'pedido-detalle': return `Detalle Pedido #${params.id}`;
+            case 'terminos': return 'Términos y Condiciones';
+            case 'privacidad': return 'Política de Privacidad';
+            case 'garantias': return 'Información de Garantías';
+            case 'catalogo-digital': return 'Catálogo Digital';
+            case 'info-page': 
+                if (params.page === 'acerca') return 'Acerca de Nosotros';
+                if (params.page === 'tiendas') return 'Ubicación de Tiendas';
+                if (params.page === 'empleo') return 'Únete al equipo';
+                return 'Información';
+            default: return 'ELECTRO SHOP';
+        }
+    }
 });
