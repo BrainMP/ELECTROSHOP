@@ -1,6 +1,6 @@
 /* =========================================
-   ESTILOS BASE Y TIPOGRAFÍA
-   ========================================= */
+    ESTILOS BASE Y TIPOGRAFÍA
+    ========================================= */
 body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     margin: 0;
@@ -37,8 +37,8 @@ a:hover {
 }
 
 /* =========================================
-   ESTILOS DEL HEADER (ESCRITORIO)
-   ========================================= */
+    ESTILOS DEL HEADER (ESCRITORIO)
+    ========================================= */
 .header-steren {
     background-color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -53,11 +53,14 @@ a:hover {
     max-width: 1200px;
     margin: 0 auto 10px;
     padding: 25px 15px;
+    /* Ajuste para que en móvil el logo y el menú hamburguesa no se separen tanto */
+    flex-wrap: wrap; 
 }
 
 .logo {
     display: flex;
     align-items: center;
+    flex-shrink: 0; /* Evita que el logo se encoja */
 }
 
 .main-logo {
@@ -68,8 +71,9 @@ a:hover {
     padding: 0;
 }
 
+/* Botón Hamburguesa: Oculto en escritorio */
 .menu-toggle {
-    display: none;
+    display: none; 
     background: none;
     border: none;
     font-size: 2em;
@@ -78,6 +82,7 @@ a:hover {
     padding: 0 10px;
 }
 
+/* Contenedor del menú: Se ajusta para el móvil */
 .main-menu-container {
     display: block;
     position: static;
@@ -124,6 +129,7 @@ a:hover {
     display: flex;
     gap: 20px;
     align-items: center;
+    flex-shrink: 0;
 }
 .user-links a {
     color: #555;
@@ -133,6 +139,7 @@ a:hover {
     color: #ff6600;
 }
 
+/* Navegación principal */
 .main-nav {
     background-color: #555;
     border-top: 1px solid #666;
@@ -165,8 +172,9 @@ a:hover {
 }
 
 /* =========================================
-   ESTILOS GENERALES DE PERFIL / FORMULARIO
-   ========================================= */
+    ESTILOS GENERALES DE PERFIL / FORMULARIO
+    (Se mantienen los estilos base, la magia responsiva está en el Media Query)
+    ========================================= */
 .profile-section {
     margin-bottom: 25px; 
     padding-bottom: 15px; 
@@ -191,36 +199,7 @@ a:hover {
     color: #007bff;
 }
 
-/* =========================================
-   ESTILOS GENERALES DE PERFIL / FORMULARIO
-   ========================================= */
-.profile-section {
-    margin-bottom: 25px; 
-    padding-bottom: 15px; 
-    border-bottom: 1px solid #eee; 
-}
-
-.profile-section:last-of-type {
-    border-bottom: none; 
-    padding-bottom: 0;
-    margin-bottom: 0;
-}
-
-.profile-section h2 {
-    font-size: 1.6em;
-    margin-bottom: 20px;
-    color: #333;
-    display: flex;
-    align-items: center;
-}
-.profile-section h2 i {
-    margin-right: 10px;
-    color: #007bff;
-}
-
-/* --- 1. SOLUCIÓN AL TAMAÑO DE LA IMAGEN DEL PERFIL EN LA VISTA /PERFIL --- */
-/* Esta regla ajusta la imagen en la vista del menú (header) y en la vista /perfil */
-
+/* --- ESTILOS DE ALINEACIÓN DEL PERFIL (ESCRITORIO) --- */
 .user-menu-container .user-icon-img {
     height: 42px !important;
     width: 42px !important;
@@ -229,11 +208,7 @@ a:hover {
     border: 1px solid #ddd;
 }
 
-/* 2. SOLUCIÓN A LA DESPROPORCIÓN Y ALINEACIÓN DE CAMPOS DEL PERFIL */
-
-/* Clase para botones de acción en la sección de perfil (Alineación) */
 .btn-profile-action {
-    /* Asegura que el botón sea compacto y no rompa la línea */
     width: auto !important; 
     max-width: none !important;
     white-space: nowrap; 
@@ -277,8 +252,7 @@ a:hover {
 .profile-section .email-display-group label {
     width: 100px;
 }
-
-/* --- FIN ESTILOS DE ALINEACIÓN DEL PERFIL --- */
+/* --- FIN ESTILOS DE ALINEACIÓN DEL PERFIL (ESCRITORIO) --- */
 
 
 .form-group label {
@@ -339,10 +313,9 @@ a:hover {
 }
 
 /* =========================================
-   ESTILOS DEL ICONO DEL CARRITO
-   ========================================= */
+    ESTILOS DEL ICONO DEL CARRITO
+    ========================================= */
 
-/* Ajusta el enlace del carrito para que sea flex y alinee el ícono */
 .cart-link {
     display: flex;
     align-items: center;
@@ -350,23 +323,21 @@ a:hover {
     text-decoration: none;
 }
 
-/* Estilo para la imagen del icono del carrito (¡AÑADE ESTO!) */
 .cart-icon-img {
     height: 42px;
     width: 42px;
     object-fit: contain;
-    border-radius: 50%; /* <-- ¡AÑADE ESTA LÍNEA! */
+    border-radius: 50%;
 }
 
-/* Mantenemos el color naranja para el número del contador */
 .cart-link span {
     font-weight: bold;
     color: #ff6600;
 }
 
 /* =========================================
-   ESTILOS DEL FOOTER
-   ========================================= */
+    ESTILOS DEL FOOTER
+    ========================================= */
 .footer-steren {
     background-color: #e9e9e9;
     padding: 30px 0 15px;
@@ -417,7 +388,6 @@ a:hover {
     cursor: pointer;
     position: relative;
 }
-/* CORRECCIÓN: Por defecto, el after no se muestra en escritorio */
 .footer-toggle::after {
     display: none;
 }
@@ -425,8 +395,8 @@ a:hover {
     transition: max-height 0.3s ease-out, opacity 0.3s;
 }
 /* =========================================
-   ESTILOS DE REDES SOCIALES (FOOTER) - CORREGIDO
-   ========================================= */
+    ESTILOS DE REDES SOCIALES (FOOTER)
+    ========================================= */
 
 .social-links {
     display: flex;
@@ -436,17 +406,14 @@ a:hover {
     opacity: 1;
 }
 
-/* * Selector más específico para anular la regla ".footer-col a"
- * y asegurar que el ícono sea blanco.
- */
 .footer-col .social-icon {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 40px;
     height: 40px;
-    background-color: #555; /* Fondo gris */
-    color: white; /* Color del ícono (blanco) */
+    background-color: #555;
+    color: white;
     border-radius: 50%;
     text-decoration: none;
     font-size: 1.1em;
@@ -454,9 +421,9 @@ a:hover {
 }
 
 .social-icon:hover {
-    background-color:  #ff6600 ; /* Fondo naranja */
+    background-color:  #ff6600 ;
     transform: scale(1.1);
-    color: white; /* El ícono se mantiene blanco */
+    color: white;
 }
 
 .footer-bottom {
@@ -471,8 +438,8 @@ a:hover {
 
 
 /* =========================================
-   ESTILOS DE PRODUCTO (Catálogo)
-   ========================================= */
+    ESTILOS DE PRODUCTO (Catálogo)
+    ========================================= */
 .productos-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -553,56 +520,51 @@ a:hover {
 
 /* Estilos para el mensaje de carrito vacío */
 .empty-cart-message {
-    /* Centrado y Espaciado */
-    text-align: center; /* Centra el texto horizontalmente */
-    padding: 80px 20px; /* Añade margen vertical para centrarlo visualmente */
-
-    /* Fuente */
-    font-size: 1.4em; /* Hace la letra 40% más grande que el texto base */
-    font-weight: 600; /* Letra semi-negrita para que destaque */
+    text-align: center;
+    padding: 80px 20px;
+    font-size: 1.4em;
+    font-weight: 600;
     color: #333;
 }
 
-/* Estilo para el enlace dentro del mensaje (opcional, para mantener el color) */
 .empty-cart-message .link-productos {
-    color: #FF6600; /* Usando el color naranja de tu marca para el enlace */
-    text-decoration: none; /* Quitar el subrayado por defecto */
+    color: #FF6600;
+    text-decoration: none;
 }
 .empty-cart-message .link-productos:hover {
     text-decoration: underline;
 }
 
 /* =========================================
-   ESTILO PARA "IVA INCLUIDO" EN CATÁLOGO
-   ========================================= */
+    ESTILO PARA "IVA INCLUIDO" EN CATÁLOGO
+    ========================================= */
 
 .producto-precio {
-     margin-bottom: 8px; /* Asegura que el precio no esté pegado al texto de IVA */
+     margin-bottom: 8px;
 }
 
 .iva-incluido {
-    /* Color verde (como el botón de "Proceder al Pago") */
     color: #000;
-    font-size: 0.85em; /* Pequeño pero legible */
+    font-size: 0.85em;
     font-weight: 500;
-    margin-top: -8px;  /* Sube el texto para pegarlo al precio */
-    margin-bottom: 10px; /* Espacio antes del final de la tarjeta */
-    text-align: center; /* Asegura que esté centrado */
+    margin-top: -8px;
+    margin-bottom: 10px;
+    text-align: center;
 }
 
 /* =========================================
-   ESTILOS ESPECÍFICOS DE LA PÁGINA DE DETALLE
-   ========================================= */
+    ESTILOS ESPECÍFICOS DE LA PÁGINA DE DETALLE
+    ========================================= */
 
 .detalle-container {
-    /* La regla principal que usa Flexbox para la vista lateral */
+    /* La regla principal que usa Flexbox para la vista lateral (ESCRITORIO) */
     display: flex;
     gap: 40px;
     margin-top: 30px;
     background-color: white;
     padding: 20px;
     border-radius: 5px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Añadido box-shadow para profesionalismo */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 .detalle-img {
     flex-basis: 40%;
@@ -612,7 +574,7 @@ a:hover {
 }
 .precio-grande {
     font-size: 2.8em;
-    color: #ff6600; /* Color naranja de acción/precio */
+    color: #ff6600;
     font-weight: bold;
     margin-bottom: 20px;
 }
@@ -627,10 +589,9 @@ a:hover {
 }
 
 /* =========================================
-   ESTILOS ESPECÍFICOS PARA CARRITO
-   ========================================= */
+    ESTILOS ESPECÍFICOS PARA CARRITO
+    ========================================= */
 
-/* CONTENEDOR ESPECÍFICO PARA CARRITO */
 .cart-container {
     max-width: 800px;
     margin: 0 auto;
@@ -818,11 +779,14 @@ a:hover {
 }
 
 .remove-product-btn {
+    background: none;
+    border: none;
     color: #dc3545 !important;
     text-decoration: none !important;
     font-size: 0.9em !important;
     font-weight: 500 !important;
     padding: 5px 0 !important;
+    cursor: pointer;
 }
 
 .remove-product-btn:hover {
@@ -867,8 +831,8 @@ a:hover {
     gap: 15px !important;
 }
 
-.primary-checkout-btn {
-    background: #ff6b00 !important;
+.primary-checkout-btn, .btn-pagar-ahora {
+    background: #ff6600 !important;
     color: white !important;
     border: none !important;
     padding: 18px !important;
@@ -876,9 +840,11 @@ a:hover {
     font-weight: bold !important;
     letter-spacing: 1px;
     transition: background-color 0.3s !important;
+    width: 100%;
+    border-radius: 8px;
 }
 
-.primary-checkout-btn:hover {
+.primary-checkout-btn:hover, .btn-pagar-ahora:hover {
     background: #e65c00 !important;
 }
 
@@ -892,6 +858,8 @@ a:hover {
     border-radius: 8px !important;
     cursor: pointer !important;
     transition: all 0.3s !important;
+    display: block;
+    text-align: center;
 }
 
 .secondary-checkout-btn:hover {
@@ -899,10 +867,9 @@ a:hover {
     color: #ff6b00 !important;
 }
 /* =========================================
-   ESTILOS DE LIMPIEZA PARA CARRITO (Refactorización)
-   ========================================= */
+    ESTILOS DE LIMPIEZA PARA CARRITO (Refactorización)
+    ========================================= */
 
-/* Títulos de secciones internas (Método de pago) */
 .payment-section-title {
     font-size: 1.2em;
     border-bottom: 1px solid #ddd;
@@ -912,7 +879,6 @@ a:hover {
     font-weight: 600;
 }
 
-/* Alerta específica cuando no hay tarjetas */
 .no-cards-alert {
     margin-top: 10px;
     background: #e9f5ff;
@@ -922,7 +888,6 @@ a:hover {
     color: #004085;
 }
 
-/* Estilos para los textos dentro de la tarjeta (VISA **** 1234) */
 .card-text-type {
     font-weight: 600;
     margin-right: 5px;
@@ -934,72 +899,59 @@ a:hover {
 }
 
 .card-text-expiry {
-    /* Usamos margin-left: auto para empujarlo a la derecha,
-       pero sin que se salga del contenedor flex */
     margin-left: auto;
     font-size: 0.9em;
     color: #888;
-    padding-left: 10px; /* Espacio mínimo de seguridad */
+    padding-left: 10px;
 }
 
-/* Aviso rojo cuando no hay tarjeta seleccionada */
 .no-card-warning {
-    color: #dc3545; /* Rojo estándar */
+    color: #dc3545;
     font-weight: bold;
     text-align: center;
     margin-top: 15px;
     font-size: 0.95em;
 }
 
-/* Ajustes de espaciado para los contenedores principales */
 .payment-method-selection {
     margin-top: 30px;
-    /* Los demás estilos (background, shadow) ya están definidos arriba en tu CSS */
 }
 
 .cart-summary-card {
     margin-top: 25px;
-    /* Los demás estilos ya están definidos arriba en tu CSS */
-}
-
-/* Ajuste final para el botón de seguir comprando */
-.secondary-checkout-btn {
-    display: block;
-    text-align: center;
-    margin-top: 15px;
 }
 
 /* =========================================
-   ESTILOS MEJORADOS TARJETAS Y MODAL
-   ========================================= */
+    ESTILOS MEJORADOS TARJETAS Y MODAL
+    ========================================= */
 
-/* 1. Botón de Eliminar (Icono Limpio) */
 .btn-delete-card {
-    background: transparent; /* Sin fondo */
+    background: transparent;
     border: none;
-    color: #999; /* Gris suave por defecto */
+    color: #999;
     cursor: pointer;
     font-size: 1.2em;
     padding: 8px;
     border-radius: 50%;
     transition: all 0.3s ease;
+    margin-left: auto; /* Nuevo: Empuja el botón a la derecha */
 }
 
 .btn-delete-card:hover {
-    color: #dc3545; /* Rojo al pasar el mouse */
-    background-color: rgba(220, 53, 69, 0.1); /* Círculo rojo muy tenue */
+    color: #dc3545;
+    background-color: rgba(220, 53, 69, 0.1);
     transform: scale(1.1);
 }
 
 /* 2. Ventana Modal Personalizada (El reemplazo del Pop-up) */
 .modal-overlay {
-    display: none; /* Oculto por defecto */
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
+    background-color: rgba(0, 0, 0, 0.5);
     z-index: 2000;
     justify-content: center;
     align-items: center;
@@ -1059,8 +1011,8 @@ a:hover {
 @keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
 
 /* =========================================
-   ESTILOS DE SELECCIÓN DE TARJETA
-   ========================================= */
+    ESTILOS DE SELECCIÓN DE TARJETA
+    ========================================= */
 
 .payment-method-selection {
     background-color: #fff;
@@ -1072,20 +1024,18 @@ a:hover {
 .radio-card-option {
     position: relative;
     margin-bottom: 15px;
-    border: 1px solid #e0e0e0; /* Borde gris suave */
+    border: 1px solid #e0e0e0;
     border-radius: 8px;
     transition: all 0.2s ease-in-out;
-    background-color: #fff; /* Fondo blanco limpio */
+    background-color: #fff;
 }
 
-/* Efecto al pasar el mouse: Borde azul y fondo muy tenue */
 .radio-card-option:hover {
     border-color: #0056b3;
-    background-color: #f0f8ff; /* AliceBlue (muy clarito) */
+    background-color: #f0f8ff;
     box-shadow: 0 4px 8px rgba(0, 86, 179, 0.15);
 }
 
-/* Estilo de la etiqueta para que ocupe todo el espacio clickeable */
 .radio-card-option label {
     display: flex;
     align-items: center;
@@ -1096,14 +1046,12 @@ a:hover {
     color: #333;
 }
 
-/* Separar el input radio del texto */
 .radio-card-option input[type="radio"] {
     margin-right: 15px;
-    transform: scale(1.2); /* Hace el circulito un poco más grande */
-    accent-color: #0056b3; /* Pone el circulito en azul cuando se selecciona */
+    transform: scale(1.2);
+    accent-color: #0056b3;
 }
 
-/* Iconos de las tarjetas */
 .radio-card-option i {
     font-size: 1.8em;
     margin-right: 10px;
@@ -1111,14 +1059,12 @@ a:hover {
     text-align: center;
 }
 
-/* Colores específicos para los iconos */
 .fa-cc-visa { color: #1A1F71; }
 .fa-cc-mastercard { color: #EB001B; }
-.fa-credit-card { color: #555; } /* Para "OTRA" */
+.fa-credit-card { color: #555; }
 
-/* Ajuste del botón de Pagar para que combine con tu tema naranja */
 .btn-pagar-ahora {
-    background-color: #ff6600!important; /* Naranja marca */
+    background-color: #ff6600!important;
     font-size: 1.2em !important;
     font-weight: bold !important;
     letter-spacing: 1px;
@@ -1126,13 +1072,13 @@ a:hover {
 }
 
 .btn-pagar-ahora:hover {
-    background-color: #e65c00 !important; /* Naranja más oscuro al hover */
+    background-color: #e65c00 !important;
 }
 
 
 /* =======================================
-   Estilos de Tarjetas de Pedidos (pedidos.html)
-   ======================================= */
+    Estilos de Tarjetas de Pedidos (pedidos.html)
+    ======================================= */
 .order-list {
     margin-top: 20px;
 }
@@ -1178,17 +1124,17 @@ a:hover {
 }
 .status-PENDIENTE {
     background-color: #0d6efd;
-} /* Azul */
+}
 .status-CANCELADO {
     background-color: #dc3545;
-} /* Rojo */
+}
 .status-ENVIADO {
     background-color: #ffc107;
     color: #333;
-} /* Amarillo */
+}
 .status-ENTREGADO {
     background-color: #198754;
-} /* Verde */
+}
 
 /* --- BOTÓN DETALLE EN LISTA --- */
 .btn-detail {
@@ -1207,8 +1153,8 @@ a:hover {
 }
 
 /* =======================================
-   Estilos de Detalle de Pedido (pedido-detalle.html)
-   ======================================= */
+    Estilos de Detalle de Pedido (pedido-detalle.html)
+    ======================================= */
 
 .detail-card {
     background-color: #fff;
@@ -1297,7 +1243,6 @@ a:hover {
     color: white;
 }
 
-/* Reutilizar clases de estado para el badge de detalle */
 .status-PENDIENTE {
     background-color: #0d6efd;
 }
@@ -1313,26 +1258,24 @@ a:hover {
 }
 
 /* =======================================
-   Estilos para el Modal de Archivar
-   ======================================= */
+    Estilos para el Modal de Archivar
+    ======================================= */
 
-/* Fondo oscurecido del modal */
 .modal {
-    display: none; /* Oculto por defecto */
-    position: fixed; /* Permanece en su lugar */
-    z-index: 1000; /* Se superpone a todo */
+    display: none;
+    position: fixed;
+    z-index: 1000;
     left: 0;
     top: 0;
-    width: 100%; /* Ancho completo */
-    height: 100%; /* Alto completo */
-    overflow: auto; /* Habilitar scroll si es necesario */
-    background-color: rgba(0,0,0,0.6); /* Fondo semi-transparente negro */
-    display: flex; /* Para centrar el contenido */
-    align-items: center; /* Centrado vertical */
-    justify-content: center; /* Centrado horizontal */
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-/* Contenido del modal */
 .modal-content.archive-modal-content {
     background-color: #fefefe;
     margin: auto;
@@ -1340,31 +1283,28 @@ a:hover {
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
     width: 90%;
-    max-width: 450px; /* Ancho máximo para el pop-up */
+    max-width: 450px;
     text-align: center;
-    position: relative; /* Para el botón de cerrar */
+    position: relative;
 }
 
-/* Icono dentro del modal */
 .modal-icon {
-    font-size: 3.5em; /* Tamaño grande para el icono */
-    color: #007bff; /* Color azul */
+    font-size: 3.5em;
+    color: #007bff;
     margin-bottom: 15px;
 }
 .modal-icon .fas {
-    border: 3px solid #007bff; /* Borde azul alrededor del icono */
-    border-radius: 50%; /* Hacerlo circular */
-    padding: 15px; /* Espacio alrededor del icono */
+    border: 3px solid #007bff;
+    border-radius: 50%;
+    padding: 15px;
 }
 
-/* Título del modal */
 .modal-content h2 {
     color: #333;
     font-size: 1.8em;
     margin-bottom: 10px;
 }
 
-/* Texto de descripción */
 .modal-content p {
     color: #666;
     font-size: 1.1em;
@@ -1372,7 +1312,6 @@ a:hover {
     margin-bottom: 25px;
 }
 
-/* Botón de cerrar (la 'x') */
 .close-button {
     color: #aaa;
     position: absolute;
@@ -1388,17 +1327,15 @@ a:hover {
     text-decoration: none;
 }
 
-/* Contenedor de botones del modal */
 .modal-buttons {
     display: flex;
-    justify-content: center; /* Centra los botones */
-    gap: 15px; /* Espacio entre botones */
+    justify-content: center;
+    gap: 15px;
     margin-top: 20px;
 }
 
-/* Estilo para el botón Cancelar del modal */
 .btn-modal-cancel {
-    background-color: #6c757d; /* Gris */
+    background-color: #6c757d;
     color: white;
     padding: 12px 25px;
     border: none;
@@ -1411,9 +1348,8 @@ a:hover {
     background-color: #5a6268;
 }
 
-/* Estilo para el botón de Confirmar Archivar del modal (AZUL) */
 .btn-modal-confirm-archive {
-    background-color: #007bff; /* Azul primario */
+    background-color: #007bff;
     color: white;
     padding: 12px 25px;
     border: none;
@@ -1424,21 +1360,21 @@ a:hover {
     transition: background-color 0.2s;
 }
 .btn-modal-confirm-archive:hover {
-    background-color: #0056b3; /* Azul más oscuro al pasar el ratón */
+    background-color: #0056b3;
 }
 
 /* =========================================
-   ESTILOS UNIFICADOS PARA FORMULARIOS (LOGIN/REGISTRO/PERFIL)
-   ========================================= */
+    ESTILOS UNIFICADOS PARA FORMULARIOS (LOGIN/REGISTRO/PERFIL)
+    ========================================= */
 
 .login-container {
     width: 100%;
-    max-width: 420px;        /* Ancho elegante */
+    max-width: 420px;
     background-color: #fff;
-    padding: 40px;           /* Espacio interno generoso */
-    border-radius: 12px;     /* Bordes suaves */
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05); /* Sombra moderna */
-    margin: 0 auto;          /* Centrado horizontal básico */
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    margin: 0 auto;
 }
 
 .login-container h1 {
@@ -1449,7 +1385,6 @@ a:hover {
     color: #333;
 }
 
-/* Contenedor flexible para alinear hijos */
 .login-container form {
     width: 100%;
     display: flex;
@@ -1457,12 +1392,11 @@ a:hover {
     align-items: center;
 }
 
-/* REGLA REFORZADA: Form Group sin padding extra */
 .form-group {
     width: 100%;
     margin-bottom: 20px;
-    padding: 0;              /* Resetear padding */
-    border: none;            /* Quitar bordes invisibles */
+    padding: 0;
+    border: none;
     text-align: left;
 }
 
@@ -1473,19 +1407,18 @@ a:hover {
     color: #555;
 }
 
-/* REGLA REFORZADA: Input con ancho forzado */
 .form-control {
-    width: 100% !important;        /* Forzar ancho completo */
-    max-width: 100% !important;    /* Evitar desbordamiento */
-    box-sizing: border-box !important; /* Crucial: padding dentro del ancho */
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
     height: 45px;
     padding: 10px 15px;
     font-size: 1em;
     border: 1px solid #ddd;
     border-radius: 6px;
     background-color: #f9f9f9;
-    margin: 0;                     /* Resetear márgenes externos */
-    display: block;                /* Asegurar comportamiento de bloque */
+    margin: 0;
+    display: block;
     transition: border-color 0.3s, background-color 0.3s;
 }
 
@@ -1496,14 +1429,13 @@ a:hover {
     box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.1);
 }
 
-/* REGLA REFORZADA: Botón con ancho forzado idéntico */
 .btn-login {
-    width: 100% !important;        /* Forzar ancho completo */
-    max-width: 100% !important;    /* Evitar desbordamiento */
-    box-sizing: border-box !important; /* Crucial */
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
     height: 45px;
-    padding: 0;                    /* Sin padding lateral que afecte el ancho */
-    display: flex;                 /* Flex para centrar texto */
+    padding: 0;
+    display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1.1em;
@@ -1513,7 +1445,7 @@ a:hover {
     background-color: #0056b3;
     color: white;
     cursor: pointer;
-    margin-top: 10px;              /* Espacio arriba */
+    margin-top: 10px;
     margin-bottom: 0;
     transition: background-color 0.3s, transform 0.2s;
 }
@@ -1543,555 +1475,548 @@ a:hover {
     font-size: 0.9em;
 }
 
-        /* =========================================
-               ESTILOS DEL MENÚ DESPLEGABLE DE USUARIO
-               ========================================= */
+/* =========================================
+    ESTILOS DEL MENÚ DESPLEGABLE DE USUARIO
+    ========================================= */
 
-            /* Contenedor relativo para anclar el menú */
-            .user-menu-container {
-                position: relative;
-                display: inline-block;
-            }
+.user-menu-container {
+    position: relative;
+    display: inline-block;
+}
 
-            /* Botón que contiene el ícono de torso */
-            .user-menu-trigger {
-                background: none;
-                border: none;
-                cursor: pointer;
-                padding: 0;
-                border-radius: 50%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
+.user-menu-trigger {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-            /* La imagen del ícono (torso) */
-            .user-icon-img {
-                height: 38px;
-                width: 38px;
-                border-radius: 50%;
-                object-fit: cover;
-                border: 1px solid #ddd;
-            }
+.user-icon-img {
+    height: 38px;
+    width: 38px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid #ddd;
+}
 
-            /* El menú desplegable (oculto por defecto) */
-            .user-menu-dropdown {
-                display: none;
+.user-menu-dropdown {
+    display: none;
+    position: absolute;
+    top: 120%;
+    right: 0;
+    min-width: 220px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    border: 1px solid #eee;
+    text-align: left;
+}
 
-                position: absolute;
-                top: 120%; /* Posición debajo del ícono */
-                right: 0;
-                min-width: 220px; /* Ancho del menú */
-                background-color: white;
-                border-radius: 8px;
-                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-                z-index: 1000;
-                border: 1px solid #eee;
-                text-align: left; /* Asegura alineación izquierda del texto */
-            }
+.user-menu-dropdown.is-active {
+    display: block;
+}
 
-            /* Clase que añade el JS para mostrar el menú */
-            .user-menu-dropdown.is-active {
-                display: block;
-            }
+.user-menu-dropdown .dropdown-header {
+    padding: 15px 20px;
+    border-bottom: 1px solid #f0f0f0;
+    color: #333;
+}
 
-            /* Estilos internos del menú */
-            .user-menu-dropdown .dropdown-header {
-                padding: 15px 20px;
-                border-bottom: 1px solid #f0f0f0;
-                color: #333;
-            }
+.user-menu-dropdown .dropdown-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
 
-            .user-menu-dropdown .dropdown-links {
-                list-style: none;
-                padding: 0;
-                margin: 0;
-            }
+.user-menu-dropdown .dropdown-links li a {
+    display: block;
+    padding: 12px 20px;
+    text-decoration: none;
+    color: #0056b3;
+    font-size: 0.95em;
+}
+.user-menu-dropdown .dropdown-links li a:hover {
+    background-color: #f8f8f8;
+}
 
-            .user-menu-dropdown .dropdown-links li a {
-                display: block;
-                padding: 12px 20px;
-                text-decoration: none;
-                color: #0056b3;
-                font-size: 0.95em;
-            }
-            .user-menu-dropdown .dropdown-links li a:hover {
-                background-color: #f8f8f8;
-            }
+.user-menu-dropdown .dropdown-footer {
+    padding: 10px 20px;
+    background-color: #f9f9f9;
+    border-top: 1px solid #f0f0f0;
+}
 
-            .user-menu-dropdown .dropdown-footer {
-                padding: 10px 20px;
-                background-color: #f9f9f9;
-                border-top: 1px solid #f0f0f0;
-            }
-
-            /* Botón de Cerrar Sesión (dentro del menú) */
-            .btn-logout {
-                background: none;
-                border: none;
-                color: #d9534f; /* Color rojo */
-                cursor: pointer;
-                padding: 5px 0;
-                font-size: 0.9em;
-                font-weight: 500;
-            }
-            .btn-logout:hover {
-                text-decoration: underline;
-            }
-        
-        /* Cierre de la sección de estilos de menú de usuario */
-
-       /* =========================================
-          ESTILOS PARA ALERTAS (Tipo "Toast" Moderno)
-          ========================================= */
-
-       /* Definición de animaciones */
-       @keyframes fadeInDown {
-           from {
-               opacity: 0;
-               transform: translate(-50%, -30px);
-           }
-           to {
-               opacity: 1;
-               transform: translate(-50%, 0);
-           }
-       }
-
-       @keyframes fadeOutUp {
-           from {
-               opacity: 1;
-               transform: translate(-50%, 0);
-           }
-           to {
-               opacity: 0;
-               transform: translate(-50%, -30px);
-           }
-       }
-
-       .alert {
-           position: fixed; /* Fija la alerta en la pantalla */
-           top: 120px; /* Justo debajo de tu barra de menú */
-           left: 50%;  /* Centrado horizontalmente */
-           transform: translateX(-50%); /* Ajuste fino del centrado */
-           z-index: 9999; /* Asegura que esté por encima de todo */
-
-           padding: 15px 25px;
-           margin-bottom: 20px;
-           border: none;
-           border-radius: 8px;
-           box-shadow: 0 5px 15px rgba(0,0,0,0.15);
-           font-size: 1.1em;
-           font-weight: 500;
-
-           /* Animación de entrada */
-           animation: fadeInDown 0.5s ease-out;
-       }
-
-       /* Clase que añadirá JavaScript para la salida */
-       .alert-fade-out {
-           animation: fadeOutUp 0.5s ease-in forwards;
-       }
-
-       .alert-danger {
-           color: #fff;
-           background-color: #d9534f; /* Rojo sólido */
-       }
-
-       .alert-success {
-           color: #fff;
-           background-color: #28a745; /* Verde sólido (como el botón de pago) */
-       }
-
-       .alert-info {
-           color: #fff;
-           background-color: #0056b3; /* Azul primario */
-       }
+.btn-logout {
+    background: none;
+    border: none;
+    color: #d9534f;
+    cursor: pointer;
+    padding: 5px 0;
+    font-size: 0.9em;
+    font-weight: 500;
+}
+.btn-logout:hover {
+    text-decoration: underline;
+}
 
 /* =========================================
-   MEDIA QUERIES (RESPONSIVE DESIGN)
-   ========================================= */
+    ESTILOS PARA ALERTAS (Tipo "Toast" Moderno)
+    ========================================= */
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -30px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+}
+
+@keyframes fadeOutUp {
+    from {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+    to {
+        opacity: 0;
+        transform: translate(-50%, -30px);
+    }
+}
+
+.alert {
+    position: fixed;
+    top: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+
+    padding: 15px 25px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    font-size: 1.1em;
+    font-weight: 500;
+
+    animation: fadeInDown 0.5s ease-out;
+    width: auto; /* Nuevo: El ancho se ajusta al contenido */
+    max-width: 90%; /* Nuevo: Previene desbordamiento en móviles */
+}
+
+.alert-fade-out {
+    animation: fadeOutUp 0.5s ease-in forwards;
+}
+
+.alert-danger {
+    color: #fff;
+    background-color: #d9534f;
+}
+
+.alert-success {
+    color: #fff;
+    background-color: #28a745;
+}
+
+.alert-info {
+    color: #fff;
+    background-color: #0056b3;
+}
+
+/* =========================================
+    MEDIA QUERIES (RESPONSIVE DESIGN)
+    ========================================= */
 
 /* REGLA AÑADIDA: Para Escritorio (> 768px) */
 @media (min-width: 769px) {
-    /* Fuerza la visualización de las listas del footer */
-    .footer-content {
-        max-height: none !important; 
-        opacity: 1 !important;       
-        overflow: visible !important;
-    }
-    /* Oculta el icono de despliegue en escritorio */
-    .footer-toggle::after {
-        content: none !important;
-        display: none !important;
-    }
+    /* Fuerza la visualización de las listas del footer */
+    .footer-content {
+        max-height: none !important; 
+        opacity: 1 !important;       
+        overflow: visible !important;
+    }
+    /* Oculta el icono de despliegue en escritorio */
+    .footer-toggle::after {
+        content: none !important;
+        display: none !important;
+    }
 }
 
 @media (max-width: 1024px) {
-    .header-top, .main-nav ul, .footer-grid, .container {
-        width: 95%;
-        padding: 0 10px;
-    }
-    .main-nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
+    .header-top, .main-nav ul, .footer-grid, .container {
+        width: 95%;
+        padding: 0 10px;
+    }
+    .main-nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }
 
 @media (max-width: 768px) { 
-    /* Esta es la apertura CORRECTA para 768px y abajo */
-    .menu-toggle {
-        display: block;
-        order: -1;
-        flex-shrink: 0;
-    }
+    
+    /* === HEADER === */
+    .menu-toggle {
+        display: block;
+        order: -1;
+        flex-shrink: 0;
+    }
+    
+    .header-top {
+        /* Deshacemos el flex-wrap de escritorio */
+        display: flex !important; 
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        flex-wrap: wrap !important; /* Mantenemos flex-wrap para que los elementos caigan */
+        gap: 10px !important;
+        width: 100%;
+        padding: 15px 10px; /* Reducir padding superior/inferior */
+    }
 
-    .header-top {
-        display: flex !important;
-        flex-direction: row !important;
-        align-items: center !important;
-        justify-content: space-between !important;
-        flex-wrap: nowrap !important;
-        gap: 10px !important;
-        width: 100%;
-    }
+    .logo {
+        /* Permite que el logo se mantenga centrado en la fila superior */
+        order: 0;
+    }
+    
+    .search-bar {
+        /* Mueve la barra de búsqueda a una segunda fila */
+        order: 3; 
+        width: 100%;
+        margin-top: 10px;
+    }
+    
+    .user-links {
+        /* Mueve los enlaces de usuario a la derecha en la fila superior */
+        order: 1; 
+        width: auto;
+        justify-content: flex-end;
+        gap: 10px;
+        font-size: 0.9em;
+    }
 
+    /* === MENÚ HAMBURGUESA DESPLEGABLE === */
+    .main-menu-container {
+        /* Se convierte en un menú lateral */
+        width: 80%; /* Ocupa un 80% del ancho */
+        max-width: 300px;
+        position: fixed; /* Fixed para que permanezca al hacer scroll */
+        top: 0; /* Lo ajustamos a 0 para que cubra toda la altura */
+        left: -100%;
+        background-color: #333;
+        transition: left 0.3s ease-out;
+        z-index: 999;
+        height: 100%; /* Cubre toda la altura */
+        overflow-y: auto;
+    }
 
-    .search-bar {
-        width: 100%;
-        max-width: 100%;
-    }
+    .main-menu-container.is-open {
+        left: 0;
+    }
 
-    .user-links {
-        width: 100%;
-        justify-content: space-between;
-        margin-top: 5px;
-        font-size: 0.9em;
-    }
+    .main-nav {
+        overflow-x: hidden;
+    }
 
-    .main-menu-container {
-        width: 100%;
-        position: absolute;
-        top: 60px;
-        left: -100%;
-        background-color: #333;
-        transition: left 0.3s ease-out;
-        z-index: 999;
-        height: 100vh;
-        overflow-y: auto;
-    }
+    .main-nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        flex-wrap: nowrap;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
 
-    .main-menu-container.is-open {
-        left: 0;
-    }
+    .main-nav li {
+        width: 100%;
+        border-bottom: 1px solid #444;
+        padding: 0;
+        margin: 0;
+    }
 
-    .main-nav {
-        overflow-x: hidden;
-    }
+    .main-nav li a {
+        padding: 12px 15px; /* Más espacio para tocar */
+        font-size: 1em;
+        text-transform: none;
+        white-space: normal;
+    }
 
-    .main-nav ul {
-        flex-direction: column;
-        align-items: flex-start;
-        flex-wrap: nowrap;
-        width: 100%;
-        padding: 0;
-        margin: 0;
-    }
+    /* === CATÁLOGO === */
+    .productos-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    /* === DETALLE DE PRODUCTO === */
+     .detalle-container {
+        flex-direction: column;
+        gap: 20px;
+        padding: 15px;
+    }
+    .detalle-img,
+    .detalle-info {
+        flex-basis: 100%;
+    }
+    .precio-grande {
+        font-size: 2.5em;
+    }
+    
+    /* === CARRITO === */
+    .cart-container {
+        padding: 15px !important;
+    }
 
-    .main-nav li {
-        width: 100%;
-        border-bottom: 1px solid #444;
-        padding: 0;
-        margin: 0;
-    }
+    .cart-item-card {
+        flex-direction: column !important;
+        gap: 15px !important;
+        text-align: center !important;
+    }
 
-    .main-nav li a {
-        padding: 10px 15px;
-        font-size: 1em;
-        text-transform: none;
-        white-space: normal;
-    }
+    .cart-item-image {
+        align-self: center !important;
+    }
 
-    .productos-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
-    }
+    .cart-item-info {
+        text-align: center !important;
+    }
 
-    .cart-table {
-        display: block;
-        overflow-x: auto;
-        white-space: nowrap;
-    }
+    .cart-item-actions {
+        align-items: center !important;
+        width: 100% !important;
+    }
+    
+    /* Los botones de cantidad deben estar en el centro */
+    .quantity-controls-wrapper {
+        display: flex;
+        justify-content: center;
+    }
 
-    .footer-grid {
-        flex-direction: column;
-    }
-    .footer-col {
-        flex-basis: 100%;
-        margin-bottom: 0;
-        border-bottom: 1px solid #ddd;
-        padding-bottom: 10px;
-    }
+    .delivery-buttons-container {
+        flex-direction: column !important;
+        align-items: center !important;
+    }
 
-    /* Estas reglas controlan el despliegue en móvil */
-    .footer-content {
-        max-height: 0;
-        overflow: hidden;
-        opacity: 0;
-    }
-    .footer-content.is-active {
-        max-height: 500px;
-        opacity: 1;
-        overflow: visible;
-    }
+    .delivery-option-btn {
+        max-width: 100% !important;
+    }
 
-    .footer-toggle {
-        font-weight: 800;
-        cursor: pointer;
-        padding: 5px 0;
-        position: relative;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
+    .total-label, .total-amount {
+        font-size: 1.1em !important;
+    }
+    .summary-box .total-line {
+        font-size: 1.1em;
+    }
 
-    /* Muestra la flecha solo en móvil */
-    .footer-toggle::after {
-        content: ' \2304';
-        position: absolute;
-        right: 0;
-        font-size: 1.2em;
-        transition: transform 0.3s ease-out;
-        transform: rotate(0deg);
-        display: block !important;
-    }
+    /* === PERFIL: Formulario de Alineación === */
+    .profile-section form .form-group {
+        /* Cambia a apilado vertical */
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
 
-    .footer-toggle.is-active::after {
-        transform: rotate(180deg);
-    }
+    .profile-section form .form-group label {
+        /* Ocupa el ancho completo y alinea a la izquierda */
+        width: 100%;
+        text-align: left;
+    }
 
-    /* RESPONSIVE PARA CARRITO */
-    .cart-container {
-        padding: 15px !important;
-    }
+    .profile-section form .form-group input.form-control {
+        /* Ocupa el ancho completo de la sección */
+        max-width: 100% !important;
+    }
 
-    .cart-item-card {
-        flex-direction: column !important;
-        gap: 15px !important;
-        text-align: center !important;
-    }
+    .profile-section .email-display-group {
+        /* Se apila igual que los demás, reseteando el padding forzado */
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 0;
+    }
+    
+    .btn-profile-action {
+        /* Ocupa el ancho completo en móvil */
+        width: 100% !important;
+        height: 45px !important;
+        margin-top: 5px;
+    }
+    
+    /* === FOOTER (Acordeón) === */
+    .footer-grid {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .footer-col {
+        flex-basis: 100%;
+        margin-bottom: 0;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 10px;
+    }
 
-    .cart-item-image {
-        align-self: center !important;
-    }
+    /* Estas reglas controlan el despliegue en móvil (Acordeón) */
+    .footer-content {
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+    }
+    .footer-content.is-active {
+        max-height: 500px;
+        opacity: 1;
+        overflow: visible;
+    }
 
-    .cart-item-actions {
-        align-items: center !important;
-        width: 100% !important;
-    }
+    .footer-toggle {
+        font-weight: 800;
+        cursor: pointer;
+        padding: 10px 0; /* Más espacio para tocar */
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 
-    .delivery-buttons-container {
-        flex-direction: column !important;
-        align-items: center !important;
-    }
+    .footer-toggle::after {
+        content: ' \2304';
+        position: absolute;
+        right: 0;
+        font-size: 1.2em;
+        transition: transform 0.3s ease-out;
+        transform: rotate(0deg);
+        display: block !important;
+    }
 
-    .delivery-option-btn {
-        max-width: 100% !important;
-    }
+    .footer-toggle.is-active::after {
+        transform: rotate(180deg);
+    }
+    
+    .social-links {
+        justify-content: flex-start; /* Alineación a la izquierda para mejor estética */
+        margin-top: 15px;
+    }
 
-    /*DISEÑO RESPONSIVO TABLETS*/
-    @media (max-width: 600px) {
+    /* === DETALLE DE PEDIDO === */
+    .row {
+        flex-direction: column;
+    }
+    .col-md-8, .col-md-4 {
+        flex: 100%;
+    }
+    
+    .product-table {
+        /* Se fuerza a no encogerse demasiado, aparecerá scroll horizontal si es necesario */
+        display: block; 
+        overflow-x: auto;
+        white-space: nowrap;
+    }
 
-        /* Header */
-        .main-logo {
-            height: 60px !important;
-        }
+    .action-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .btn-cancel, .btn-archive {
+        width: 100%;
+        text-align: center;
+    }
+}
 
-        .search-bar {
-            width: 100%;
-        }
-
-        .header-top {
-            padding: 15px 10px;
-            gap: 10px;
-        }
-
-        /* Productos → 2 columnas */
-        .productos-grid {
-            grid-template-columns: repeat(2, 1fr);
-            gap: 10px;
-        }
-
-        .producto-card img {
-            height: 130px;
-        }
-
-        .producto-precio {
-            font-size: 1.1em;
-        }
-
-        /* DETALLE DE PRODUCTO */
-        .detalle-container {
-            flex-direction: column;
-            padding: 15px;
-        }
-        .detalle-img,
-        .detalle-info {
-            flex-basis: 100%;
-        }
-        .precio-grande {
-            font-size: 2.2em;
-        }
-
-        /* CARRITO */
-        .cart-item-card {
-            padding: 15px !important;
-            flex-direction: column !important;
-            text-align: center !important;
-            gap: 15px !important;
-        }
-        .cart-item-actions {
-            width: 100% !important;
-            justify-content: center;
-        }
-
-        /* FOOTER */
-        .footer-grid {
-            gap: 10px;
-        }
-
-        .footer-col {
-            flex-basis: 100%;
-        }
-    }
-
-/*RESPONSIVO TELEFONO IPHONE, ANDRIOD CHICO*/
+/*RESPONSIVO TELEFONO IPHONE, ANDRIOD CHICO (Max-width: 480px)*/
 @media (max-width: 480px) {
 
-    body {
-        font-size: 14px;
-    }
+    body {
+        font-size: 14px;
+    }
 
-    /* Header */
-    .main-logo {
-        height: 50px !important;
-    }
+    /* Header: Ajuste fino */
+    .main-logo {
+        max-height: 50px !important;
+    }
 
-    .user-links {
-        gap: 10px;
-        font-size: 0.8em;
-    }
+    .user-links {
+        gap: 8px;
+        font-size: 0.8em;
+    }
 
-    /* Menú hamburguesa más grande */
-    .menu-toggle {
-        font-size: 2.2em;
-    }
+    .cart-icon-img, .user-icon-img {
+        height: 35px !important;
+        width: 35px !important;
+    }
 
-    /* Productos → 1 columna */
-    .productos-grid {
-        grid-template-columns: 1fr;
-    }
+    .menu-toggle {
+        font-size: 2.2em;
+        padding: 0 5px;
+    }
+    
+    /* Productos → 1 columna (Visión de lista apilada) */
+    .productos-grid {
+        grid-template-columns: 1fr;
+    }
 
-    .producto-card img {
-        height: 160px;
-    }
+    .producto-card img {
+        height: 180px; /* Damos más altura en la vista de una sola columna */
+    }
 
-    /* Detalle de producto */
-    .precio-grande {
-        font-size: 2em;
-    }
-    .detalle-desc {
-        font-size: 0.9em;
-    }
+    .producto-nombre {
+        font-size: 1.1em;
+    }
 
-    /* CARRITO */
-    .delivery-option-btn {
-        max-width: 100%;
-        font-size: 0.9em;
-        padding: 12px 15px;
-    }
+    /* Detalle de producto */
+    .precio-grande {
+        font-size: 2em;
+    }
+    .detalle-desc {
+        font-size: 0.9em;
+    }
 
-    /* Footer */
-    .social-links {
-        justify-content: center;
-    }
+    /* CARRITO */
+    .delivery-option-btn {
+        max-width: 100%;
+        font-size: 0.9em;
+        padding: 12px 15px;
+    }
+    
+    /* Resumen del Carrito */
+    .total-label {
+        font-size: 1em !important;
+    }
+    
+    .total-amount {
+        font-size: 1.2em !important;
+    }
 
-    .social-icon {
-        width: 35px;
-        height: 35px;
-    }
+    /* Footer */
+    .social-links {
+        justify-content: flex-start;
+    }
+    
+    .footer-col h3 {
+        font-size: 1em;
+    }
 }
 
-/*RESPONSIVO PANTAÑAS MUY PEQUEÑAS*/
+/* RESPONSIVO PANTAÑAS MUY PEQUEÑAS (Max-width: 380px) */
 @media (max-width: 380px) {
 
-    .main-logo {
-        height: 45px !important;
-    }
+    .main-logo {
+        max-height: 45px !important;
+    }
 
-    .producto-card img {
-        height: 140px;
-    }
+    .producto-card img {
+        height: 140px;
+    }
 
-    .btn-comprar {
-        font-size: 0.85em;
-    }
+    .btn-comprar {
+        font-size: 0.85em;
+    }
 
-    .precio-grande {
-        font-size: 1.8em;
-    }
+    .precio-grande {
+        font-size: 1.8em;
+    }
 
-    .delivery-option-btn {
-        font-size: 0.85em;
-    }
-
-    .footer-col h3 {
-        font-size: 1em;
-    }
-}
-/* =========================================
-   ESTILOS CORREGIDOS PARA ALINEACIÓN DE PERFIL
-   ========================================= */
-
-/* Estilos para el botón de acción dentro de la sección de perfil */
-.btn-profile-action {
-    /* Fuerza al botón a no ocupar todo el espacio, permitiendo que el input también quepa */
-    width: auto !important; 
-    max-width: none !important;
-    white-space: nowrap; /* Asegura que el texto no se rompa */
-    height: 40px !important; /* Altura estándar para botones */
-    padding: 0 15px !important;
-}
-
-/* Contenedor Flex para alinear label, input y botón en la misma línea */
-.profile-section form .form-group {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 10px; /* Reducir el margen inferior para compactar */
-}
-
-/* Asegurar que el label tenga un ancho fijo para que todo se alinee */
-.profile-section form .form-group label {
-    flex-shrink: 0; /* No permite que el label se encoja */
-    width: 100px; /* Ancho fijo para alinear visualmente */
-    text-align: right;
-    margin-bottom: 0;
-}
-
-/* Asegurar que el input ocupe el espacio restante sin desbordar */
-.profile-section form .form-group input.form-control {
-    flex-grow: 1;
-    max-width: 250px !important; /* Un ancho razonable para campos */
-}
-
-/* Ajuste específico para el grupo de email que no tiene botón */
-.profile-section .email-display-group {
-    display: flex;
-    align-items: baseline;
-    gap: 10px;
-    padding-left: 110px; /* Padding para alinearse con los inputs de arriba */
-}
-
-.profile-section .email-display-group label {
-    width: 100px;
+    .delivery-option-btn {
+        font-size: 0.85em;
+    }
 }
